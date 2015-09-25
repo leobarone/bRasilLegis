@@ -1,15 +1,42 @@
-obterIntegraComissoesRelator <- function(tipo.param,
-                                         numero.param,
-                                         ano.param){
-  parsedRequestOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Orgaos.asmx/ObterIntegraComissoesRelator?',
-                                      query = list(tipo = tipo.param,
-                                                   numero = numero.param,
-                                                   ano = ano.param)))
-  comissao <- data.frame(tipo = tipo.param, numero = numero.param, ano = ano.param,
-                         cbind(as.data.frame(t(xpathSApply(parsedRequestOutput, "//comissao", xmlAttrs))),
-                               xmlToDataFrame(getNodeSet(parsedRequestOutput,"//comissao"), stringsAsFactors = F)))
+#' Get Proposition Committees Report
+#'
+#' @description Returns a data frame containing detailed information on the committees
+#' reports of the requested proposition in the Brazilian Chamber of Deputies. sigla,
+#' numero and ano are required parameters. Proposition's name is always combination of sigla
+#' (type of propostion), numero (number of proposition) and ano (year of propostion).
+#'
+#' @param sigla string, the type of the proposition(s) (check listarSiglasTipoProposicao
+#' function for help), which is part ot the name of the propostion(s).
+#' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
+#' for help), which is part ot the name of the propostion(s).
+#' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
+#' function for help), which is part ot the name of the propostion(s) and represents the year
+#' the proposition was written.
+#'
+#' @return A data frame containing detailed information on the committees reports of the
+#' requested propostion.
+#'
+#' @author Leonardo Sangali Barone; Alexia Aslan
+#'
+#' @examples
+#'
+#' # Proposition without any amendments, substitutive and final draft
+#' emendas <- obterIntegraComissoesRelator("PL", 404, 2015)
+#' print(emendas)
+#'
+#' @rdname obterIntegraComissoesRelator
+#'
+#' @export
+
+obterIntegraComissoesRelator <- function(tipo,
+                                         numero,
+                                         ano){
+  parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Orgaos.asmx/ObterIntegraComissoesRelator?',
+                                      query = list(tipo = tipo,
+                                                   numero = numero,
+                                                   ano = ano)))
+  comissao <- data.frame(tipo = tipo, numero = numero, ano = ano,
+                         cbind(xmlAttributesToDataFrame(parsedOutput, "//comissao")),
+                               xmlToDataFrame(getNodeSet(parsedOutput,"//comissao"), stringsAsFactors = F))
   return(comissao)
 }
-
-# tipo.param="PL"; numero.param=3962; ano.param=2008
-# obterIntegraComissoesRelator(tipo.param, numero.param, ano.param)

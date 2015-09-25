@@ -2,7 +2,7 @@
 % Please edit documentation in R/listarPresencasDia.R
 \name{listarPresencasDia}
 \alias{listarPresencasDia}
-\title{List Legislators Attendance in one day}
+\title{List Legislators' Attendance in one day}
 \usage{
 listarPresencasDia(data, numLegislatura = "", numMatriculaParlamentar = "",
   siglaPartido = "", siglaUF = "")

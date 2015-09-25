@@ -13,6 +13,10 @@
 #' the proposition was written.
 #' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
 #' for help), which is part ot the name of the propostion(s).
+#' @param data string of format dd/mm/yyyy, the date if the sessions.
+#' @param idOrgaoSituacaoProposicao string, the Camara dos Deputados stance where the proposition is
+#' located (check listarTiposOrgaos function for help). This is a optional parameter and it's default
+#' is empty.
 #'
 #' @return A data frame containing detailed information the requested propositions and attached
 #' propositions.

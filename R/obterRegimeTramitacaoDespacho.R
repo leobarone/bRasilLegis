@@ -1,14 +1,40 @@
-obterRegimeTramitacaoDespacho <- function(tipo.param,
-                                         numero.param,
-                                         ano.param){
-  parsedRequestOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Orgaos.asmx/ObterRegimeTramitacaoDespacho?',
-                                      query = list(tipo = tipo.param,
-                                                   numero = numero.param,
-                                                   ano = ano.param)))
-  proposicao <- data.frame(tipo = tipo.param, numero = numero.param, ano = ano.param,
-                           xmlToDataFrame(getNodeSet(parsedRequestOutput,"//proposicao"), stringsAsFactors = F))
+#' Get Proposition Processing Status
+#'
+#' @description Returns a data frame containing detailed information on the processing status
+#' of the requested proposition in the Brazilian Chamber of Deputies. sigla, numero and ano
+#' are required parameters. Proposition's name is always combination of sigla (type of propostion),
+#' numero (number of proposition) and ano (year of propostion).
+#'
+#' @param sigla string, the type of the proposition(s) (check listarSiglasTipoProposicao
+#' function for help), which is part ot the name of the propostion(s).
+#' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
+#' for help), which is part ot the name of the propostion(s).
+#' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
+#' function for help), which is part ot the name of the propostion(s) and represents the year
+#' the proposition was written.
+#'
+#' @return A data frame containing detailed information on the processing status
+#' of the requested proposition.
+#'
+#' @author Leonardo Sangali Barone; Alexia Aslan
+#'
+#' @examples
+#'
+#' regime <- obterRegimeTramitacaoDespacho("PL", 404, 2015)
+#' print(regime)
+#'
+#' @rdname obterRegimeTramitacaoDespacho
+#'
+#' @export
+
+obterRegimeTramitacaoDespacho <- function(tipo,
+                                          numero,
+                                          ano){
+  parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Orgaos.asmx/ObterRegimeTramitacaoDespacho?',
+                               query = list(tipo = tipo,
+                                            numero = numero,
+                                            ano = ano)))
+  proposicao <- data.frame(tipo = tipo, numero = numero, ano = ano,
+                           xmlToDataFrame(getNodeSet(parsedOutput,"//proposicao"), stringsAsFactors = F))
   return(proposicao)
 }
-
-# tipo.param="PL"; numero.param=8035; ano.param=2010
-# obterRegimeTramitacaoDespacho(tipo.param, numero.param, ano.param)

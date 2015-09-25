@@ -1,4 +1,4 @@
-#' List Legislators Attendance in one day
+#' List Legislators' Attendance in one day
 #'
 #' @description Returns a data frame with information on legislators attendance to sessions
 #' in an specific day. The maximum difference between initial and final date allowed by the

@@ -12,7 +12,7 @@ listarProposicoes(sigla = "", ano = "", numero = "",
   codOrgaoEstado = "")
 }
 \arguments{
-\item{sigla}{character, the type of the proposition(s) (check listarSiglasTipoProposicao
+\item{sigla}{string, the type of the proposition(s) (check listarSiglasTipoProposicao
 function for help), which is part ot the name of the propostion(s).}
 
 \item{ano}{integer, the year of the proposition(s) (check listarSiglasTipoProposicao

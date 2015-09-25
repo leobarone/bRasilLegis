@@ -16,6 +16,12 @@ for help), which is part ot the name of the propostion(s).}
 \item{ano}{integer, the year of the proposition(s) (check listarSiglasTipoProposicao
 function for help), which is part ot the name of the propostion(s) and represents the year
 the proposition was written.}
+
+\item{data}{string of format dd/mm/yyyy, the date if the sessions.}
+
+\item{idOrgaoSituacaoProposicao}{string, the Camara dos Deputados stance where the proposition is
+located (check listarTiposOrgaos function for help). This is a optional parameter and it's default
+is empty.}
 }
 \value{
 A data frame containing detailed information the requested propositions and attached

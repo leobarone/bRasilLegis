@@ -2,7 +2,7 @@
 #'
 #' @description Returns a data frame containing all the possible types of propositions (siglas)
 #' in the Brazilian Chamber of Deputies (for example, "PL" (Projeto de Lei), "MPV" (Medida
-#' Provisória, etc) and respectives identification codes at the web Service. This function
+#' Provisória, etc) and respectives identification codes at the web service. This function
 #' does not require any parameter.
 #'
 #' @return A data frame containing all the possible types of propositions.

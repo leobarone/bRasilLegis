@@ -6,7 +6,7 @@
 #' name) is filled in. Proposition's name is always a combination of sigla (type of propostion),
 #' numero (number of proposition) and ano (year of propostion).
 #'
-#' @param sigla character, the type of the proposition(s) (check listarSiglasTipoProposicao
+#' @param sigla string, the type of the proposition(s) (check listarSiglasTipoProposicao
 #' function for help), which is part ot the name of the propostion(s).
 #' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
 #' function for help), which is part ot the name of the propostion(s) and represents the year
