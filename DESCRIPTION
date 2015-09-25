@@ -1,0 +1,13 @@
+Package: bRasilLegis
+Type: Package
+Title: An R interface to the web API of Brazilian Chamber of Deputies
+Version: 0.1
+Date: 2015-09-11
+Author: Leonardo Sangali Barone <leobarone@gmail.com>, Alexia Aslan <alexia.aslan@gmail.com>
+Maintainer: Leonardo Sangali Barone <leobarone@gmail.com>
+Description: The package offers methods to fetch legislative information stored in the 
+	web API maintained by the Brazilian Chamber of Deputies
+Depends:
+	XML, httr
+License: AGPL-3
+LazyData: TRUE
