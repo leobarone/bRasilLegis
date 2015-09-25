@@ -19,5 +19,5 @@
 
 obterDeputados <- function() {
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Deputados.asmx/ObterDeputados?'))
-  return(xmlToDataFrame(parsedRequestOutput))
+  return(xmlToDataFrame(parsedOutput, stringsAsFactors = F))
 }

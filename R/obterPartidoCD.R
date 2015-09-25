@@ -19,5 +19,5 @@
 
 obterPartidosCD <- function() {
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Deputados.asmx/ObterPartidosCD'))
-  return(xmlToDataFrame(parsedOutput))
+  return(xmlToDataFrame(parsedOutput, stringsAsFactors = F))
 }
