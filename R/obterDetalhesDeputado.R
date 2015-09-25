@@ -1,15 +1,43 @@
-obterDetalhesDeputado <- function (ideCadastro.param,
-                                   numLegislatura.param = "",
+#' Get Legislator Details
+#'
+#' @description Returns a data frame containing detailed information of the legislator (for
+#' example, political parties, leaderships, committee positions, etc) in the Brazilian Chamber
+#' of Deputies. The parameter atuacao helps to define what type of information is going to be
+#' returned.
+#'
+#' @param ideCadastro integer, the legislator id number at the web service (check obterDeputados
+#' function for help).
+#' @param numLegislatura integer, is the number of a Legislature. This is an optional parameter
+#' and it's default is empty.
+#' @param atuacao string, if "bio" (default), return the basic bio information of the legislator;
+#' if "comissoes", return the committee information of the legislator; if "cargos", return the
+#' information on the positions occupied by the the legilator, if "exercicios" return the time
+#' intervals in which the legislator were at Câmara dos Deputados; if "filiacoes" return the
+#' political parties in which the legislators belonged; and if "lideranca", returns leadership
+#' information of the legislators.
+#'
+#' @return A data frame containing detailed information of the legislator.
+#'
+#' @author Leonardo Sangali Barone; Alexia Aslan
+#'
+#' @examples
+#'
+#' obterDetalhesDeputado(74784)
+#'
+#' @rdname obterDetalhesDeputado
+#' @export
+
+obterDetalhesDeputado <- function (ideCadastro,
+                                   numLegislatura = "",
                                    atuacao = "bio"){
-  ideCadastro.param = 141529
-  parsedRequestOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Deputados.asmx/ObterDetalhesDeputado?',
-                                      query = list(ideCadastro = ideCadastro.param,
-                                                   numLegislatura = numLegislatura.param)))
-  infoBasica <- xmlToDataFrame(parsedRequestOutput)[,1:12]
+  parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Deputados.asmx/ObterDetalhesDeputado?',
+                                      query = list(ideCadastro = ideCadastro,
+                                                   numLegislatura = numLegislatura)))
+  infoBasica <- xmlToDataFrame(parsedOutput)[,1:12]
 
   if (atuacao == "bio") {
-    partidoAtual <- xmlToDataFrame(getNodeSet(parsedRequestOutput, "//partidoAtual"))
-    gabinete <- xmlToDataFrame(getNodeSet(parsedRequestOutput, "//gabinete"))
+    partidoAtual <- xmlToDataFrame(getNodeSet(parsedOutput, "//partidoAtual"))
+    gabinete <- xmlToDataFrame(getNodeSet(parsedOutput, "//gabinete"))
     output <- cbind(infoBasica, partidoAtual, gabinete)
   }
 
@@ -17,7 +45,7 @@ obterDetalhesDeputado <- function (ideCadastro.param,
     infoBasica <- infoBasica[,c(1, 8, 10)]
     output <- data.frame()
     for (i in nrow(infoBasica)) {
-      comissoes <- xmlToDataFrame(getNodeSet(parsedRequestOutput,
+      comissoes <- xmlToDataFrame(getNodeSet(parsedOutput,
                                              paste("//Deputado[.//numLegislatura/text() = '",
                                                    Deputado$numLegislatura[i],
                                                    "']//comissao",
@@ -29,7 +57,7 @@ obterDetalhesDeputado <- function (ideCadastro.param,
       infoBasica <- infoBasica[,c(1, 8, 10)]
       output <- data.frame()
       for (i in nrow(infoBasica)) {
-        cargos <- xmlToDataFrame(getNodeSet(parsedRequestOutput,
+        cargos <- xmlToDataFrame(getNodeSet(parsedOutput,
                                                paste("//Deputado[.//numLegislatura/text() = '",
                                                      Deputado$numLegislatura[i],
                                                      "']//cargosComissoes",
@@ -42,7 +70,7 @@ obterDetalhesDeputado <- function (ideCadastro.param,
       infoBasica <- infoBasica[,c(1, 8, 10)]
       output <- data.frame()
       for (i in nrow(infoBasica)) {
-        periodos <- xmlToDataFrame(getNodeSet(parsedRequestOutput,
+        periodos <- xmlToDataFrame(getNodeSet(parsedOutput,
                                                paste("//Deputado[.//numLegislatura/text() = '",
                                                      Deputado$numLegislatura[i],
                                                      "']//periodosExercicio",
@@ -55,7 +83,7 @@ obterDetalhesDeputado <- function (ideCadastro.param,
       infoBasica <- infoBasica[,c(1, 8, 10)]
       output <- data.frame()
       for (i in nrow(infoBasica)) {
-        filiacoes <- xmlToDataFrame(getNodeSet(parsedRequestOutput,
+        filiacoes <- xmlToDataFrame(getNodeSet(parsedOutput,
                                               paste("//Deputado[.//numLegislatura/text() = '",
                                                     Deputado$numLegislatura[i],
                                                     "']//filiacoesPartidarias",
@@ -68,7 +96,7 @@ obterDetalhesDeputado <- function (ideCadastro.param,
       infoBasica <- infoBasica[,c(1, 8, 10)]
       output <- data.frame()
       for (i in nrow(infoBasica)) {
-        lideranca <- xmlToDataFrame(getNodeSet(parsedRequestOutput,
+        lideranca <- xmlToDataFrame(getNodeSet(parsedOutput,
                                                paste("//Deputado[.//numLegislatura/text() = '",
                                                      Deputado$numLegislatura[i],
                                                      "']//historicoLider",

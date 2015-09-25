@@ -95,5 +95,5 @@ listarProposicoes <- function(sigla = "",
                                                   EmTramitacao = emTramitacao,
                                                   codEstado = codEstado,
                                                   codOrgaoEstado = codOrgaoEstado)))
-  return(xmlToDataFrame(parsedOutput), stringsAsFactors = F)
+  return(xmlToDataFrame(parsedOutput, stringsAsFactors = F))
 }
