@@ -2,15 +2,15 @@
 % Please edit documentation in R/obterOrgaos.R
 \name{obterOrgaos}
 \alias{obterOrgaos}
-\title{Get Câmara dos Deputados Organizations}
+\title{Get Camara dos Deputados Organizations}
 \usage{
 obterOrgaos()
 }
 \value{
-A data frame with information on Câmara dos Deputados organizations.
+A data frame with information on Camara dos Deputados organizations.
 }
 \description{
-Returns a data frame that lists internal Câmara dos Deputados organizations
+Returns a data frame that lists internal Camara dos Deputados organizations
 (comittees for example) and respectives identification codes at the web
 service. This function does not require any parameter.
 }

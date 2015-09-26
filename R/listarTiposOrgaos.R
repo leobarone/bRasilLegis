@@ -1,10 +1,10 @@
-#' List Câmara dos Deputados Organizations
+#' List Camara dos Deputados Organizations
 #'
-#' @description Returns a data frame that lists internal Câmara dos Deputados organizations
-#' (for example, "Comissão", "Bancada") and respectives identification codes at the web
+#' @description Returns a data frame that lists internal Camara dos Deputados organizations
+#' (for example, "Comissao", "Bancada") and respectives identification codes at the web
 #' service. This function does not require any parameter.
 #'
-#' @return A data frame with information on Câmara dos Deputados organizations.
+#' @return A data frame with information on Camara dos Deputados organizations.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

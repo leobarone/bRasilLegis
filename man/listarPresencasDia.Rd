@@ -18,7 +18,7 @@ function for help). This is a optional parameter and it's default is empty.}
 \item{siglaPartido}{string, the political part of the proposition's author. This is a optional
 parameter and it's default is empty.}
 
-\item{siglaUF}{string, the state (Unidade da Federação) of the proposition's author. This is
+\item{siglaUF}{string, the state (Unidade da Federacao) of the proposition's author. This is
 a optional parameter and it's default is empty.}
 }
 \value{

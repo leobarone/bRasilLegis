@@ -1,8 +1,8 @@
 #' List types of Authors
 #'
 #' @description Returns a data frame containing all the possible types of authors of propositions
-#' in the Brazilian Chamber of Deputies (for example, "Bancada", "Deputado Federal", "Senador",
-#' "Comissão Diretora", "Órgão do Poder Executivo", etc) and respectives identification
+#' at Camara dos Deputados (for example, "Bancada", "Deputado Federal", "Senador",
+#' "Comissao Diretora", "Orgao do Poder Executivo", etc) and respectives identification
 #' codes at the web service. This function does not require any parameter.
 #'
 #' @return A data frame containing all the possible types of authors of propositions.

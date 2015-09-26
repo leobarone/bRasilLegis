@@ -11,7 +11,7 @@ A data frame containing basic information of all the active legislators in the B
 }
 \description{
 Returns a data frame containing detailed information of the active legislators
-in the Brazilian Chamber of Deputies and their respective basic information. There are none required parameters.
+at Camara dos Deputados and their respective information. There are none required parameters.
 }
 \examples{
 # Return a data frame containing all of the active legislators
@@ -19,6 +19,6 @@ deputados <- obterDeputados()
 print(deputados)
 }
 \author{
-Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
+Alexia Aslan; Leonardo Sangali Barone;
 }
 

@@ -1,8 +1,8 @@
 #' List Propositions in Process
 #'
 #' @description Returns a data frame containing legislative actions taken
-#' by proposition between and initial and a final date (parameters of the function) in the
-#' Brazilian Chamber of Deputies. The maximum difference between  initial and final date
+#' by proposition between and initial and a final date (parameters of the function) at
+#' Camara dos Deputados. The maximum difference between  initial and final date
 #' allowed by the web service allowed is 7 days. The inputs for this functions are of
 #' class character and in the format dd/mm/yyyy.
 #'
@@ -29,8 +29,6 @@
 #' @export
 
 listarProposicoesTramitadasNoPeriodo <- function(dtInicio, dtFim) {
-#   dtFim.param <- as.character(as.Date(dtInicio.param, '%d/%m/%Y') + 6)
-#   dtFim.param <- paste(substr(dtFim.param, 9, 10), substr(dtFim.param, 6, 7), substr(dtFim.param, 1, 4), sep = "/")
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br//SitCamaraWS/Proposicoes.asmx/ListarProposicoesTramitadasNoPeriodo?',
                                       query = list(dtInicio = dtInicio,
                                                    dtFim = dtFim)))

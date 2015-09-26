@@ -1,7 +1,7 @@
 #' Get Votes of a Proposition
 #'
 #' @description Returns a data frame containing all the roll call votes for the requested
-#' proposition and individual votes in the Brazilian Chamber of Deputies. bancada is an
+#' proposition and individual votes at Camara dos Deputados. bancada is an
 #' optional parameter and if bancada = TRUE, leadership votes will be returned instead of
 #' individual legislators vote. Note that when a proposition goes to the floor every
 #' amendment, substitutive propositions, etc, will be submitted to voting, not only the
@@ -27,12 +27,12 @@
 #'
 #' @examples
 #'
-#' # Return the roll call votes for the Proposta de Emenda à Constituição 358 de 2013 (constitutional
+#' # Return the roll call votes for the Proposta de Emenda a Constituicao 358 de 2013 (constitutional
 #' # amendment 358 of 2013) voted in 2015
 #' votesPec358.2013 <- obterVotacaoProposicao(tipo = "PEC", numero = 358,ano = 2013)
 #' head(votesPec358.2013)
 #'
-#' # Return the ledearship votes for the Proposta de Emenda à Constituição 358 de 2013 (constitutional
+#' # Return the ledearship votes for the Proposta de Emenda a Constituicao 358 de 2013 (constitutional
 #' # amendment 358 of 2013) voted in 2015
 #' bancadaPec358.2013 <- obterVotacaoProposicao(tipo = "PEC", numero = 358,ano = 2013, bancada = TRUE)
 #' head(bancadaPec358.2013)

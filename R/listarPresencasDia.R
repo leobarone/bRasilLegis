@@ -11,7 +11,7 @@
 #' function for help). This is a optional parameter and it's default is empty.
 #' @param siglaPartido string, the political part of the proposition's author. This is a optional
 #' parameter and it's default is empty.
-#' @param siglaUF string, the state (Unidade da Federação) of the proposition's author. This is
+#' @param siglaUF string, the state (Unidade da Federacao) of the proposition's author. This is
 #' a optional parameter and it's default is empty.
 #'
 #' @return A data frame with information on legislators attendance to sessions in an specific day.

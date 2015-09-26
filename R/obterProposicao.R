@@ -1,7 +1,7 @@
 #' Get Proposition Info
 #'
 #' @description Returns a data frame containing detailed information the requested proposition
-#' in the Brazilian Chamber of Deputies and respectives attached propositions ("proposições
+#' at Camara dos Deputados and respectives attached propositions ("proposicoes
 #' apensadas"). All the parameters are requires. Proposition's name is always a combination of
 #' tipo (type of propostion), numero (number of proposition) and ano (year of propostion). This
 #' function is similar to the obterProposicaoPorID function.

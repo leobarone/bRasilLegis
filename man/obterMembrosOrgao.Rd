@@ -2,7 +2,7 @@
 % Please edit documentation in R/obterMembrosOrgao.R
 \name{obterMembrosOrgao}
 \alias{obterMembrosOrgao}
-\title{Get Members of a Câmara dos Deputados Organization}
+\title{Get Members of a Camara dos Deputados Organization}
 \usage{
 obterMembrosOrgao(idOrgao)
 }
@@ -15,10 +15,10 @@ A data frame containing detailed information on the progess of the requested pro
 }
 \description{
 Returns a data frame containing all the legislators that are part of a
-Câmara dos Deputados Organization.
+Camara dos Deputados Organization.
 }
 \examples{
-# Members of Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural
+# Members of Comissao de Agricultura, Pecuaria, Abastecimento e Desenvolvimento Rural
 obterMembrosOrgao(2001)
 }
 \author{

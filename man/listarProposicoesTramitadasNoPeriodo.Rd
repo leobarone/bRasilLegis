@@ -18,8 +18,8 @@ A data frame containing the legislative actions taken by propositions.
 }
 \description{
 Returns a data frame containing legislative actions taken
-by proposition between and initial and a final date (parameters of the function) in the
-Brazilian Chamber of Deputies. The maximum difference between  initial and final date
+by proposition between and initial and a final date (parameters of the function) at
+Camara dos Deputados. The maximum difference between  initial and final date
 allowed by the web service allowed is 7 days. The inputs for this functions are of
 class character and in the format dd/mm/yyyy.
 }

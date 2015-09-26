@@ -1,7 +1,7 @@
 #' Get Parties Coalitions
 #'
-#' @description Returns a data frame containing details of the coalitions made by the parties with representation in
-#' the Brazilian Chamber of Deputies. All the parameters are optional.
+#' @description Returns a data frame containing details of the coalitions made by the parties with
+#' representation at Camara dos Deputados. All the parameters are optional.
 #'
 #' @param idBloco string, the identification of the coalition(s).
 #' This is an optional parameter, the default is empty.
@@ -10,7 +10,7 @@
 #'
 #' @return A data frame containing information of all or of the required coalition.
 #'
-#' @author Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
+#' @author Alexia Aslan; Leonardo Sangali Barone;
 #'
 #' @import httr XML
 #'

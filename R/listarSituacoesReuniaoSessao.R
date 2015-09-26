@@ -1,7 +1,7 @@
 #' List Status of Sessions
 #'
-#' @description Returns a data frame containing all the possible status of sessions in
-#' the Brazilian Chamber of Deputies. This function does not require any parameter.
+#' @description Returns a data frame containing all the possible status of sessions at
+#' Camara dos Deputados. This function does not require any parameter.
 #'
 #' @return A data frame containing all the possible status of sessions
 #'

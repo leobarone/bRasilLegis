@@ -1,11 +1,11 @@
 #' Get Parties
 #'
-#' @description Returns a data frame containing details of the parties with representation in
-#' the Brazilian Chamber of Deputies. There are no required parameters.
+#' @description Returns a data frame containing details of the parties with representation at
+#' Camara dos deputados. There are no required parameters.
 #'
 #' @return A data frame containing information of all the parties with representation.
 #'
-#' @author Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
+#' @author Alexia Aslan; Leonardo Sangali Barone;
 #'
 #' @import httr XML
 #'

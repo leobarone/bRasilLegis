@@ -1,7 +1,7 @@
 #' Get Proposition Info by Id
 #'
 #' @description Returns a data frame containing detailed information the requested proposition
-#' in the Brazilian Chamber of Deputies and respectives attached propositions ("proposições
+#' at Camara dos Deputados and respectives attached propositions ("proposicoes
 #' apensadas"). The only parameter (idPorpo) is requires. This function is similar to the
 #' obterProposicao function.
 #'

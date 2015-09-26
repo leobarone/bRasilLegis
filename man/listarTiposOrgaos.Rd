@@ -2,16 +2,16 @@
 % Please edit documentation in R/listarTiposOrgaos.R
 \name{listarTiposOrgaos}
 \alias{listarTiposOrgaos}
-\title{List Câmara dos Deputados Organizations}
+\title{List Camara dos Deputados Organizations}
 \usage{
 listarTiposOrgaos()
 }
 \value{
-A data frame with information on Câmara dos Deputados organizations.
+A data frame with information on Camara dos Deputados organizations.
 }
 \description{
-Returns a data frame that lists internal Câmara dos Deputados organizations
-(for example, "Comissão", "Bancada") and respectives identification codes at the web
+Returns a data frame that lists internal Camara dos Deputados organizations
+(for example, "Comissao", "Bancada") and respectives identification codes at the web
 service. This function does not require any parameter.
 }
 \note{

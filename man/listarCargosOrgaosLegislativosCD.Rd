@@ -2,16 +2,16 @@
 % Please edit documentation in R/listarCargosOrgaosLegislativosCD.R
 \name{listarCargosOrgaosLegislativosCD}
 \alias{listarCargosOrgaosLegislativosCD}
-\title{List Legislatives Positions at Câmara dos Deputdaos}
+\title{List Legislatives Positions at Camara dos Deputdaos}
 \usage{
 listarCargosOrgaosLegislativosCD()
 }
 \value{
-A data frame with information on positions at Câmara dos Deputados
+A data frame with information on positions at Camara dos Deputados
 }
 \description{
 Returns a data frame that lists positions (for example, "Presidente", "Relator",
-etc) that can be occupied by legislators at an internal Câmara dos Deputados organization
+etc) that can be occupied by legislators at an internal Camara dos Deputados organization
 (comittes, floor, etc) and respectives identification codes at the web service. This function
 does not require any parameter.
 }

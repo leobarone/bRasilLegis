@@ -10,8 +10,8 @@ obterPartidosCD()
 A data frame containing information of all the parties with representation.
 }
 \description{
-Returns a data frame containing details of the parties with representation in
-the Brazilian Chamber of Deputies. There are no required parameters.
+Returns a data frame containing details of the parties with representation at
+Camara dos deputados. There are no required parameters.
 }
 \examples{
 # Return a data frame containing the parties with representation
@@ -19,6 +19,6 @@ partidos <- obterPartidosCD()
 print(partidos)
 }
 \author{
-Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
+Alexia Aslan; Leonardo Sangali Barone;
 }
 

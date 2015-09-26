@@ -16,7 +16,7 @@ and it's default is empty.}
 \item{atuacao}{string, if "bio" (default), return the basic bio information of the legislator;
 if "comissoes", return the committee information of the legislator; if "cargos", return the
 information on the positions occupied by the the legilator, if "exercicios" return the time
-intervals in which the legislator were at Câmara dos Deputados; if "filiacoes" return the
+intervals in which the legislator were at Camara dos Deputados; if "filiacoes" return the
 political parties in which the legislators belonged; and if "lideranca", returns leadership
 information of the legislators.}
 }
@@ -25,8 +25,8 @@ A data frame containing detailed information of the legislator.
 }
 \description{
 Returns a data frame containing detailed information of the legislator (for
-example, political parties, leaderships, committee positions, etc) in the Brazilian Chamber
-of Deputies. The parameter atuacao helps to define what type of information is going to be
+example, political parties, leaderships, committee positions, etc) at Camara dos Deputados.
+The parameter atuacao helps to define what type of information is going to be
 returned.
 }
 \examples{
@@ -34,6 +34,6 @@ obterDetalhesDeputado(74784)
 obterDetalhesDeputado(74784, atuacao = "cargos")
 }
 \author{
-Leonardo Sangali Barone; Alexia Aslan
+Alexia Aslan; Leonardo Sangali Barone;
 }
 

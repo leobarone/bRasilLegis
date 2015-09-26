@@ -29,7 +29,7 @@ propositions. This is a optional parameter and it's default is empty.}
 propositions. This is a optional parameter and it's default is empty.}
 
 \item{idTipoAutor}{character, the id code of the type of author of propositon (for example, "Bancada",
-"Deputado Federal", "Senador", "Comissão Diretora", "Órgão do Poder Executivo", etc - check
+"Deputado Federal", "Senador", "Comissao Diretora", "Orgao do Poder Executivo", etc - check
 listarTiposAutores function for help). This is a optional parameter and it's default is empty.}
 
 \item{parteNomeAutor}{string, a part of the name of the propostion's author. This is a optional
@@ -38,7 +38,7 @@ parameter and it's default is empty.}
 \item{siglaPartidoAutor}{string, the political part of the proposition's author. This is a optional
 parameter and it's default is empty.}
 
-\item{siglaUfAutor}{string, the state (Unidade da Federação) of the proposition's author. This is
+\item{siglaUfAutor}{string, the state (Unidade da Federacao) of the proposition's author. This is
 a optional parameter and it's default is empty.}
 
 \item{generoAutor}{string, the gender ("F" for female "M" for male) of the proposition's author. This is
@@ -59,7 +59,7 @@ A data frame containing detailed information the requested propositions.
 }
 \description{
 Returns a data frame containing detailed information the requested propositions
-in the Brazilian Chamber of Deputies. sigla (type of propostion) and ano (year of the
+at Camara dos Deputados. sigla (type of propostion) and ano (year of the
 proposition) are required parameters, unless parteNomeAutor (author's proposition partial
 name) is filled in. Proposition's name is always a combination of sigla (type of propostion),
 numero (number of proposition) and ano (year of propostion).

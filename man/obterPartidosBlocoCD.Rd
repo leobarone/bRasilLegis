@@ -17,8 +17,8 @@ This is an optional parameter, the default is empty.}
 A data frame containing information of all or of the required coalition.
 }
 \description{
-Returns a data frame containing details of the coalitions made by the parties with representation in
-the Brazilian Chamber of Deputies. All the parameters are optional.
+Returns a data frame containing details of the coalitions made by the parties with
+representation at Camara dos Deputados. All the parameters are optional.
 }
 \examples{
 # Return a data frame containing all the coalitions
@@ -26,6 +26,6 @@ blocos <- obterPartidosBlocoCD
 print(blocos)
 }
 \author{
-Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
+Alexia Aslan; Leonardo Sangali Barone;
 }
 

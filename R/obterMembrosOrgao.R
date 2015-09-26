@@ -1,7 +1,7 @@
-#' Get Members of a Câmara dos Deputados Organization
+#' Get Members of a Camara dos Deputados Organization
 #'
 #' @description Returns a data frame containing all the legislators that are part of a
-#' Câmara dos Deputados Organization.
+#' Camara dos Deputados Organization.
 #'
 #' @param idOrgao integer, the Camara dos Deputados stance id code where the proposition is
 #' located (check listarTiposOrgaos function for help).
@@ -14,7 +14,7 @@
 #'
 #' @examples
 #'
-#' # Members of Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural
+#' # Members of Comissao de Agricultura, Pecuaria, Abastecimento e Desenvolvimento Rural
 #' obterMembrosOrgao(2001)
 #'
 #' @rdname obterMembrosOrgao

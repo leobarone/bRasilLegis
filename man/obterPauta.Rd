@@ -18,14 +18,14 @@ located (check listarTiposOrgaos function for help).}
 A data frame with information on an specific legislator attendance to sessions.
 }
 \description{
-Returns a data frame with information on the legislative agenda of a Câmara
+Returns a data frame with information on the legislative agenda of a Camara
 dos Deputados stance between an initial and a final date. The maximum difference between
 initial and final date allowed by the web service allowed is 7 days. The inputs for this
 functions are of class character and in the format dd/mm/yyyy. All the three parameters
 are required.
 }
 \examples{
-# Members of Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural
+# Members of Comissao de Agricultura, Pecuaria, Abastecimento e Desenvolvimento Rural
 # between "10/04/2012" and "17/04/2012".
 IDOrgao = 2004; dataInicial = "10/04/2012"; dataFinal = "17/04/2012"
 pauta <- obterPauta(IDOrgao, dataInicial, dataFinal)

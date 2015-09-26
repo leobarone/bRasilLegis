@@ -23,7 +23,7 @@ draft and final draft of the requested proposition.
 }
 \description{
 Returns a data frame containing detailed information on the ammendments, substitutive
-draft and final draft of the requested proposition in the Brazilian Chamber of Deputies.
+draft and final draft of the requested proposition at Camara dos Deputados.
 sigla, numero and ano are required parameters. Proposition's name is always combination of tipo
 (type of propostion), numero (number of proposition) and ano (year of propostion).
 }

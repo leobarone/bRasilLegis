@@ -10,8 +10,8 @@ obterLideresBancadas()
 A data frame containing leaders and vice-leaders of parties/coalitions.
 }
 \description{
-Returns a data frame containing leaders and vice-leaders of parties/coalitions in
-the Brazilian Chamber of Deputies. There are no required parameters.
+Returns a data frame containing leaders and vice-leaders of parties/coalitions at
+Camara dos Deputados. There are no required parameters.
 }
 \examples{
 # Return a data frame containing the learders and vice-leaders of parties/coalitions in office
@@ -19,6 +19,6 @@ lideres <- obterLideresBancadas()
 print(lideres)
 }
 \author{
-Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
+Alexia Aslan; Leonardo Sangali Barone;
 }
 

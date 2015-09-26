@@ -1,7 +1,7 @@
 #' List Voted Propositions
 #'
 #' @description Returns a data frame containing all the of propositions that were submitted to
-#' the floor for voting at the Brazilian Chamber of Deputies in an specific year (ano) and
+#' the floor for voting at Camara dos Deputados in an specific year (ano) and
 #' of a type (tipo). tipo is an optional parameter and if not specified the function will return
 #' all types of propositions.
 #'
@@ -25,7 +25,7 @@
 #' proposicoesVotadas2015 <- listarProposicoesVotadasEmPlenario(2015)
 #' head(proposicoesVotadas2015)
 #'
-#' # All the propositions of type "Proposta de Emenda à Constituição" (PEC, which
+#' # All the propositions of type "Proposta de Emenda a Constituicao" (PEC, which
 #' # are constitutional amendments) voted in 2015
 #' pecsVotadas2015 <- listarProposicoesVotadasEmPlenario(2015, "PEC")
 #' head(pecsVotadas2015)

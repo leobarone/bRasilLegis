@@ -10,8 +10,8 @@ listarSituacoesReuniaoSessao()
 A data frame containing all the possible status of sessions
 }
 \description{
-Returns a data frame containing all the possible status of sessions in
-the Brazilian Chamber of Deputies. This function does not require any parameter.
+Returns a data frame containing all the possible status of sessions at
+Camara dos Deputados. This function does not require any parameter.
 }
 \note{
 The output of this function can be used as a parameter in functions that require

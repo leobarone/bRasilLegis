@@ -11,7 +11,7 @@ A data frame containing all the possible types of situations.
 }
 \description{
 Returns a data frame containing all the possible status of propositions in
-the legislative proccess of the Brazilian Chamber of Deputies (for example, "Vetado
+the legislative proccess at Camara dos Deputados (for example, "Vetado
 totalmente" (entirely vetoed), Aguardando Parecer ("waiting for review"), etc) and
 respectives identification codes at the web Service. This function does not require any
 parameter.
