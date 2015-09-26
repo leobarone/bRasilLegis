@@ -19,9 +19,9 @@
 #'
 #' @examples
 #'
-#' dataInicial = "10/04/2012"; dataFinal = "17/04/2012"
-#' presenca <- listarPresencasDia(dataInicial, dataFinal)
-#' head(presencas)
+#' dataInicial = "10/04/2012"; dataFinal = "17/04/2012"; matricula = 371
+#' presenca <- listarPresencasParlamentar(dataInicial, dataFinal, matricula)
+#' head(presenca)
 #'
 #' @rdname listarPresencasParlamentar
 #' @export

@@ -31,6 +31,7 @@ returned.
 }
 \examples{
 obterDetalhesDeputado(74784)
+obterDetalhesDeputado(74784, atuacao = "cargos")
 }
 \author{
 Leonardo Sangali Barone; Alexia Aslan

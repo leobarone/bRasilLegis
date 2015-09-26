@@ -25,9 +25,9 @@ functions are of class character and in the format dd/mm/yyyy. All the three par
 are required.
 }
 \examples{
-dataInicial = "10/04/2012"; dataFinal = "17/04/2012"
-presenca <- listarPresencasDia(dataInicial, dataFinal)
-head(presencas)
+dataInicial = "10/04/2012"; dataFinal = "17/04/2012"; matricula = 371
+presenca <- listarPresencasParlamentar(dataInicial, dataFinal, matricula)
+head(presenca)
 }
 \author{
 Leonardo Sangali Barone; Alexia Aslan
