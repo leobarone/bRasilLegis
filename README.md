@@ -1,5 +1,5 @@
 # bRasilLegis
-R tools Brazilian Chamber of Deputies (Camara dos Deputados) data
+R tools for Brazilian Chamber of Deputies (Camara dos Deputados) data
 
 ## Data Source
 Camara dos Deputados web service: http://www2.camara.leg.br/transparencia/dados-abertos/dados-abertos-legislativo

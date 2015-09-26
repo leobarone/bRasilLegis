@@ -1,6 +1,6 @@
 Package: bRasilLegis
 Type: Package
-Title: R tools Brazilian Chamber of Deputies (Camara dos Deputados) data
+Title: R tools for Brazilian Chamber of Deputies (Camara dos Deputados) data
 Version: 0.1
 Date: 2015-09-11
 Author: Leonardo Sangali Barone <leobarone@gmail.com>, Alexia Aslan <alexia.aslan@gmail.com>
