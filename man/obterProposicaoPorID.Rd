@@ -7,7 +7,7 @@
 obterProposicaoPorID(idProp)
 }
 \arguments{
-\item{numero}{integer, the requested proposition identification number.}
+\item{idProp}{integer, the requested proposition identification number.}
 }
 \value{
 A data frame containing detailed information the requested propositions and attached

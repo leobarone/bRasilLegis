@@ -8,6 +8,10 @@ listarDiscursosPlenario(dataIni, dataFim, codigoSessao = "",
   parteNomeParlamentar = "", siglaPartido = "", siglaUF = "")
 }
 \arguments{
+\item{dataIni}{string of format dd/mm/yyyy, the initial date.}
+
+\item{dataFim}{string of format dd/mm/yyyy, the initial date.}
+
 \item{codigoSessao}{integer, the number of a required legislative session. This is
 a optional parameter and it's default is empty.}
 
@@ -19,10 +23,6 @@ parameter and it's default is empty.}
 
 \item{siglaUF}{string, the state (Unidade da Federação) of the proposition's author. This is
 a optional parameter and it's default is empty.}
-
-\item{dtInicio}{string of format dd/mm/yyyy, the initial date.}
-
-\item{dtFim}{string of format dd/mm/yyyy, the initial date.}
 }
 \value{
 A data frame containing the list of and information on speeches.

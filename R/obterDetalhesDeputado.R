@@ -20,9 +20,12 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' obterDetalhesDeputado(74784)
+#' obterDetalhesDeputado(74784, atuacao = "cargos")
 #'
 #' @rdname obterDetalhesDeputado
 #' @export
@@ -31,8 +34,8 @@ obterDetalhesDeputado <- function (ideCadastro,
                                    numLegislatura = "",
                                    atuacao = "bio"){
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Deputados.asmx/ObterDetalhesDeputado?',
-                                      query = list(ideCadastro = ideCadastro,
-                                                   numLegislatura = numLegislatura)))
+                               query = list(ideCadastro = ideCadastro,
+                                            numLegislatura = numLegislatura)))
   infoBasica <- xmlToDataFrame(parsedOutput)[,1:12]
 
   if (atuacao == "bio") {
@@ -47,62 +50,62 @@ obterDetalhesDeputado <- function (ideCadastro,
     for (i in nrow(infoBasica)) {
       comissoes <- xmlToDataFrame(getNodeSet(parsedOutput,
                                              paste("//Deputado[.//numLegislatura/text() = '",
-                                                   Deputado$numLegislatura[i],
+                                                   infoBasica$numLegislatura[i],
                                                    "']//comissao",
                                                    sep = "")), stringsAsFactors = F)
       output <- rbind(output, merge(infoBasica, comissoes))
     }
+  }
 
-    if (atuacao == "cargos") {
-      infoBasica <- infoBasica[,c(1, 8, 10)]
-      output <- data.frame()
-      for (i in nrow(infoBasica)) {
-        cargos <- xmlToDataFrame(getNodeSet(parsedOutput,
-                                               paste("//Deputado[.//numLegislatura/text() = '",
-                                                     Deputado$numLegislatura[i],
-                                                     "']//cargosComissoes",
-                                                     sep = "")), stringsAsFactors = F)
-        output <- rbind(output, merge(infoBasica, cargos))
-      }
+  if (atuacao == "cargos") {
+    infoBasica <- infoBasica[,c(1, 8, 10)]
+    output <- data.frame()
+    for (i in nrow(infoBasica)) {
+      cargos <- xmlToDataFrame(getNodeSet(parsedOutput,
+                                          paste("//Deputado[.//numLegislatura/text() = '",
+                                                infoBasica$numLegislatura[i],
+                                                "']//cargosComissoes",
+                                                sep = "")), stringsAsFactors = F)
+      output <- rbind(output, merge(infoBasica, cargos))
     }
+  }
 
-    if (atuacao == "exercicios") {
-      infoBasica <- infoBasica[,c(1, 8, 10)]
-      output <- data.frame()
-      for (i in nrow(infoBasica)) {
-        periodos <- xmlToDataFrame(getNodeSet(parsedOutput,
-                                               paste("//Deputado[.//numLegislatura/text() = '",
-                                                     Deputado$numLegislatura[i],
-                                                     "']//periodosExercicio",
-                                                     sep = "")), stringsAsFactors = F)
-        output <- rbind(output, merge(infoBasica, periodos))
-      }
+  if (atuacao == "exercicios") {
+    infoBasica <- infoBasica[,c(1, 8, 10)]
+    output <- data.frame()
+    for (i in nrow(infoBasica)) {
+      periodos <- xmlToDataFrame(getNodeSet(parsedOutput,
+                                            paste("//Deputado[.//numLegislatura/text() = '",
+                                                  infoBasica$numLegislatura[i],
+                                                  "']//periodosExercicio",
+                                                  sep = "")), stringsAsFactors = F)
+      output <- rbind(output, merge(infoBasica, periodos))
     }
+  }
 
-    if (atuacao == "filiacoes") {
-      infoBasica <- infoBasica[,c(1, 8, 10)]
-      output <- data.frame()
-      for (i in nrow(infoBasica)) {
-        filiacoes <- xmlToDataFrame(getNodeSet(parsedOutput,
-                                              paste("//Deputado[.//numLegislatura/text() = '",
-                                                    Deputado$numLegislatura[i],
-                                                    "']//filiacoesPartidarias",
-                                                    sep = "")), stringsAsFactors = F)
-        output <- rbind(output, merge(infoBasica, filiacoes))
-      }
+  if (atuacao == "filiacoes") {
+    infoBasica <- infoBasica[,c(1, 8, 10)]
+    output <- data.frame()
+    for (i in nrow(infoBasica)) {
+      filiacoes <- xmlToDataFrame(getNodeSet(parsedOutput,
+                                             paste("//Deputado[.//numLegislatura/text() = '",
+                                                   infoBasica$numLegislatura[i],
+                                                   "']//filiacoesPartidarias",
+                                                   sep = "")), stringsAsFactors = F)
+      output <- rbind(output, merge(infoBasica, filiacoes))
     }
+  }
 
-    if (atuacao == "lideranca") {
-      infoBasica <- infoBasica[,c(1, 8, 10)]
-      output <- data.frame()
-      for (i in nrow(infoBasica)) {
-        lideranca <- xmlToDataFrame(getNodeSet(parsedOutput,
-                                               paste("//Deputado[.//numLegislatura/text() = '",
-                                                     Deputado$numLegislatura[i],
-                                                     "']//historicoLider",
-                                                     sep = "")), stringsAsFactors = F)
-        output <- rbind(output, merge(infoBasica, lideranca))
-      }
+  if (atuacao == "lideranca") {
+    infoBasica <- infoBasica[,c(1, 8, 10)]
+    output <- data.frame()
+    for (i in nrow(infoBasica)) {
+      lideranca <- xmlToDataFrame(getNodeSet(parsedOutput,
+                                             paste("//Deputado[.//numLegislatura/text() = '",
+                                                   infoBasica$numLegislatura[i],
+                                                   "']//historicoLider",
+                                                   sep = "")), stringsAsFactors = F)
+      output <- rbind(output, merge(infoBasica, lideranca))
     }
   }
   return(output)

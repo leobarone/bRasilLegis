@@ -15,7 +15,7 @@
 #' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
 #' function for help), which is part ot the name of the propostion(s) and represents the year
 #' the proposition was written.
-#' @param logic, if TRUE, leadership votes will be returned instead of
+#' @param bancada logic, if TRUE, leadership votes will be returned instead of
 #' individual legislators vote.
 #'
 #' @return A data frame containing all the roll call votes for the requested
@@ -23,15 +23,17 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' # Return the roll call votes for the Proposta de Emenda à Constituição 358 de 2013 (constitutional
-#' amendment 358 of 2013) voted in 2015
+#' # amendment 358 of 2013) voted in 2015
 #' votesPec358.2013 <- obterVotacaoProposicao(tipo = "PEC", numero = 358,ano = 2013)
 #' head(votesPec358.2013)
 #'
 #' # Return the ledearship votes for the Proposta de Emenda à Constituição 358 de 2013 (constitutional
-#' amendment 358 of 2013) voted in 2015
+#' # amendment 358 of 2013) voted in 2015
 #' bancadaPec358.2013 <- obterVotacaoProposicao(tipo = "PEC", numero = 358,ano = 2013, bancada = TRUE)
 #' head(bancadaPec358.2013)
 #'

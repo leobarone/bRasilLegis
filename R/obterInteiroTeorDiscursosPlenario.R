@@ -17,6 +17,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' codSessao = "022.3.54.O"; numOrador=1 ;

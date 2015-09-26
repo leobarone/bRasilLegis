@@ -8,8 +8,8 @@
 #'
 #' @param idOrgao integer, the Camara dos Deputados stance id code where the proposition is
 #' located (check listarTiposOrgaos function for help).
-#' @param dataIni string of format dd/mm/yyyy, the initial date.
-#' @param dataFim string of format dd/mm/yyyy, the initial date.
+#' @param datIni string of format dd/mm/yyyy, the initial date.
+#' @param datFim string of format dd/mm/yyyy, the initial date.
 #'
 #' @return A data frame with information on an specific legislator attendance to sessions.
 #'

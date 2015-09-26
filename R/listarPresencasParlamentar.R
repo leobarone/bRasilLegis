@@ -15,6 +15,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' dataInicial = "10/04/2012"; dataFinal = "17/04/2012"

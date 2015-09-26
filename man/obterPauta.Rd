@@ -10,9 +10,9 @@ obterPauta(idOrgao, datIni, datFim)
 \item{idOrgao}{integer, the Camara dos Deputados stance id code where the proposition is
 located (check listarTiposOrgaos function for help).}
 
-\item{dataIni}{string of format dd/mm/yyyy, the initial date.}
+\item{datIni}{string of format dd/mm/yyyy, the initial date.}
 
-\item{dataFim}{string of format dd/mm/yyyy, the initial date.}
+\item{datFim}{string of format dd/mm/yyyy, the initial date.}
 }
 \value{
 A data frame with information on an specific legislator attendance to sessions.

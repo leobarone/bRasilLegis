@@ -8,8 +8,7 @@ listarProposicoes(sigla = "", ano = "", numero = "",
   datApresentacaoIni = "", datApresentacaoFim = "", idTipoAutor = "",
   parteNomeAutor = "", siglaPartidoAutor = "", siglaUfAutor = "",
   generoAutor = "", idSituacaoProposicao = "",
-  idOrgaoSituacaoProposicao = "", emTramitacao = "", codEstado = "",
-  codOrgaoEstado = "")
+  idOrgaoSituacaoProposicao = "", emTramitacao = "")
 }
 \arguments{
 \item{sigla}{string, the type of the proposition(s) (check listarSiglasTipoProposicao

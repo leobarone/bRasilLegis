@@ -18,6 +18,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' dataSessao = "10/04/2012"

@@ -4,8 +4,8 @@
 #' speech given between the initial and final date. Optionals can be used to specify
 #' legislator, political party, state and session.
 #'
-#' @param dtInicio string of format dd/mm/yyyy, the initial date.
-#' @param dtFim string of format dd/mm/yyyy, the initial date.
+#' @param dataIni string of format dd/mm/yyyy, the initial date.
+#' @param dataFim string of format dd/mm/yyyy, the initial date.
 #' @param codigoSessao integer, the number of a required legislative session. This is
 #' a optional parameter and it's default is empty.
 #' @param parteNomeParlamentar string, a part of the name of the legislator.
@@ -20,6 +20,8 @@
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
 #' @note The output of this function can be used as a parameter in functions that speeches ids.
+#'
+#' @import httr XML
 #'
 #' @examples
 #'
@@ -69,7 +71,7 @@ listarDiscursosPlenario <- function(dataIni,
                                               output.parcial$codigo.fase.sessao[j],
                                               "']//orador",
                                               sep = "")), stringsAsFactors = F)
-    discurso <- xmlToDataFrame(getNodeSet(parsedRequestOutput,
+    discurso <- xmlToDataFrame(getNodeSet(parsedOutput,
                                           paste("//sessao[.//codigo/text() = '",
                                                 output.parcial$codigo[j],
                                                 "']//faseSessao[.//codigo/text() = '",

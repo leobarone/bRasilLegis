@@ -7,6 +7,8 @@
 #'
 #' @author Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' # Return a data frame containing all of the active legislators

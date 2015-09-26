@@ -13,6 +13,8 @@
 #' @note The output of this function can be used as a parameter in functions that require
 #' the type of status of a proposition.
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' status  <- listarSituacoesProposicao()

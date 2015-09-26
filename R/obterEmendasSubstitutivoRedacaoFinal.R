@@ -2,10 +2,10 @@
 #'
 #' @description Returns a data frame containing detailed information on the ammendments, substitutive
 #' draft and final draft of the requested proposition in the Brazilian Chamber of Deputies.
-#' sigla, numero and ano are required parameters. Proposition's name is always combination of sigla
+#' sigla, numero and ano are required parameters. Proposition's name is always combination of tipo
 #' (type of propostion), numero (number of proposition) and ano (year of propostion).
 #'
-#' @param sigla string, the type of the proposition(s) (check listarSiglasTipoProposicao
+#' @param tipo string, the type of the proposition(s) (check listarSiglasTipoProposicao
 #' function for help), which is part ot the name of the propostion(s).
 #' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
 #' for help), which is part ot the name of the propostion(s).
@@ -17,6 +17,8 @@
 #' draft and final draft of the requested proposition.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
+#'
+#' @import httr XML
 #'
 #' @examples
 #'

@@ -4,7 +4,7 @@
 \alias{obterPartidosBlocoCD}
 \title{Get Parties Coalitions}
 \usage{
-obterPartidosBlocoCD(idBloco.param = "", numLegislatura.param = "")
+obterPartidosBlocoCD(idBloco = "", numLegislatura = "")
 }
 \arguments{
 \item{idBloco}{string, the identification of the coalition(s).

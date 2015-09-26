@@ -18,6 +18,8 @@
 #' @note The output of this function can be used as a parameter in functions that require
 #' a vector of propositions.
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' proposicoes <- listarProposicoesTramitadasNoPeriodo('01/08/2015', '08/08/2015')

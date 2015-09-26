@@ -7,15 +7,15 @@
 obterRegimeTramitacaoDespacho(tipo, numero, ano)
 }
 \arguments{
+\item{tipo}{string, the type of the proposition(s) (check listarSiglasTipoProposicao
+function for help), which is part ot the name of the propostion(s).}
+
 \item{numero}{integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
 for help), which is part ot the name of the propostion(s).}
 
 \item{ano}{integer, the year of the proposition(s) (check listarSiglasTipoProposicao
 function for help), which is part ot the name of the propostion(s) and represents the year
 the proposition was written.}
-
-\item{sigla}{string, the type of the proposition(s) (check listarSiglasTipoProposicao
-function for help), which is part ot the name of the propostion(s).}
 }
 \value{
 A data frame containing detailed information on the processing status
@@ -24,7 +24,7 @@ of the requested proposition.
 \description{
 Returns a data frame containing detailed information on the processing status
 of the requested proposition in the Brazilian Chamber of Deputies. sigla, numero and ano
-are required parameters. Proposition's name is always combination of sigla (type of propostion),
+are required parameters. Proposition's name is always combination of tipo (type of propostion),
 numero (number of proposition) and ano (year of propostion).
 }
 \examples{

@@ -23,6 +23,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' andamento <- obterAndamento("PL", 404, 2015)

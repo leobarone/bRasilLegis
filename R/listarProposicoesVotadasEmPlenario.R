@@ -17,6 +17,8 @@
 #' @note The output of this function can be used as a parameter in functions that require
 #' voted propositions.
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' # All the propositions voted in 2015
@@ -31,9 +33,9 @@
 #' @rdname listarProposicoesVotadasEmPlenario
 #' @export
 
-listarProposicoesVotadasEmPlenario <- function(ano.param, tipo.param = "") {
+listarProposicoesVotadasEmPlenario <- function(ano, tipo = "") {
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?',
-                                     query = list(ano = ano.param,
-                                                  tipo = tipo.param)))
+                                     query = list(ano = ano,
+                                                  tipo = tipo)))
   return(xmlToDataFrame(parsedOutput, stringsAsFactors = F))
 }

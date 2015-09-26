@@ -41,6 +41,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' # Return a data frame containing all of the propositions written in 2015
@@ -76,9 +78,7 @@ listarProposicoes <- function(sigla = "",
                               generoAutor = "",
                               idSituacaoProposicao = "",
                               idOrgaoSituacaoProposicao = "",
-                              emTramitacao = "",
-                              codEstado = "",
-                              codOrgaoEstado = "") {
+                              emTramitacao = "") {
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoes?',
                                      query = list(Sigla = sigla,
                                                   Numero = numero,
@@ -93,7 +93,7 @@ listarProposicoes <- function(sigla = "",
                                                   IdSituacaoProposicao = idSituacaoProposicao,
                                                   IdOrgaoSituacaoProposicao = idOrgaoSituacaoProposicao,
                                                   EmTramitacao = emTramitacao,
-                                                  codEstado = codEstado,
-                                                  codOrgaoEstado = codOrgaoEstado)))
+                                                  codEstado = "",
+                                                  codOrgaoEstado = "")))
   return(xmlToDataFrame(parsedOutput, stringsAsFactors = F))
 }

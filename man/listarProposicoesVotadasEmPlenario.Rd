@@ -4,7 +4,7 @@
 \alias{listarProposicoesVotadasEmPlenario}
 \title{List Voted Propositions}
 \usage{
-listarProposicoesVotadasEmPlenario(ano.param, tipo.param = "")
+listarProposicoesVotadasEmPlenario(ano, tipo = "")
 }
 \arguments{
 \item{ano}{integer, the year in which the propositions were submitted to the floor.}

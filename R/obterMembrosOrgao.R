@@ -10,6 +10,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' # Members of Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural

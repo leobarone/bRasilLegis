@@ -5,7 +5,7 @@
 #' apensadas"). The only parameter (idPorpo) is requires. This function is similar to the
 #' obterProposicao function.
 #'
-#' @param numero integer, the requested proposition identification number.
+#' @param idProp integer, the requested proposition identification number.
 #'
 #' @return A data frame containing detailed information the requested propositions and attached
 #' propositions.

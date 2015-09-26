@@ -12,6 +12,8 @@
 #'
 #' @author Alexia Aslan <alexia.aslan[at]gmail.com>; Leonardo Sangali Barone <leobarone[at]gmail.com>;
 #'
+#' @import httr XML
+#'
 #' @examples
 #'
 #' # Return a data frame containing all the coalitions
@@ -23,11 +25,11 @@
 #' @export
 
 
-obterPartidosBlocoCD <- function (idBloco.param = "",
-                                  numLegislatura.param = ""){
+obterPartidosBlocoCD <- function (idBloco = "",
+                                  numLegislatura = ""){
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Deputados.asmx/ObterPartidosBlocoCD?',
-                                      query = list(idBloco = idBloco.param,
-                                                   numLegislatura = numLegislatura.param)))
+                                      query = list(idBloco = idBloco,
+                                                   numLegislatura = numLegislatura)))
   bloco <- xmlToDataFrame(getNodeSet(parsedOutput, "//bloco"), stringsAsFactors = F)[,1:5]
   output <- data.frame()
 
