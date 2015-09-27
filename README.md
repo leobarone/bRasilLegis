@@ -18,5 +18,5 @@ The package offers methods to fetch legislative information stored in the web AP
 This package depends on 2 other R packages: XML and httr. Please, make sure you have them ready prior to using bRasilLeg. ALL of the functions require XML and httr.
 
 ## Want to help the developers? Have good ideas?
-This is an ongoing open source and open mind project. The mains purposes are to generate public data on Brazilian politics, enhance gov transparency, help political science community and have fun. If you have comments, critics, suggestions or even want to be part of the developing team, just write us (leobarone@gmail.com and alexia.aslan@gmail.com).
+This is an ongoing open source and open minded project. The main purposes are to generate public data on Brazilian politics, enhance gov transparency, help political science community and have fun. If you have comments, critics, suggestions or even want to be part of the developing team, just write us (leobarone@gmail.com and alexia.aslan@gmail.com).
 
