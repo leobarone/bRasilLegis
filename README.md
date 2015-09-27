@@ -7,6 +7,10 @@ Camara dos Deputados web service: http://www2.camara.leg.br/transparencia/dados-
 ## Authors
 Leonardo Sangali Barone <leobarone@gmail.com> and Alexia Aslan <alexia.aslan@gmail.com>
 
+## How to install? (thanks Carlos Cinelli and Júlio Canello):
+install.packages("devtools"); library(devtools);
+install_github("leobarone/bRasilLegis")
+
 ## How does it work?
 The package offers methods to fetch legislative information stored in the web API maintained by the Brazilian Chamber of Deputies. Tutorial coming soon. Please check Câmara dos Deputados web service for detailed information on the data available.
 
