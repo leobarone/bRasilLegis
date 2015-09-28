@@ -6,7 +6,7 @@ Date: 2015-09-11
 Author: Leonardo Sangali Barone <leobarone@gmail.com>, Alexia Aslan <alexia.aslan@gmail.com>
 Maintainer: Leonardo Sangali Barone <leobarone@gmail.com>
 Description: The package offers methods to fetch legislative information stored in the web API maintained by the Brazilian Chamber of Deputies. Tutorial coming soon. Please check Camara dos Deputados web service for detailed information on the data available.
-Depends:
+Imports:
 	XML, httr
 License: LICENSE
 LazyData: TRUE
