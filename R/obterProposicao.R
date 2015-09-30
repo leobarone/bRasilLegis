@@ -34,10 +34,12 @@ obterProposicao <- function(tipo, numero, ano) {
                                                 query = list(Tipo = tipo,
                                                              Numero = numero,
                                                              Ano = ano)))
-  proposicao <- xmlToDataFrame(getNodeSet(parsedOutput, "/proposicao"), stringsAsFactors = F)[1:19]
-  names(proposicao)
+  output <- xmlToDataFrame(getNodeSet(parsedOutput, "/proposicao"), stringsAsFactors = F)[1:19]
+  names(output)
   apensadas <- xmlToDataFrame(getNodeSet(parsedOutput, "//apensadas/proposicao"), stringsAsFactors = F)
-  names(apensadas) <- c("nomeProposicaoApensada", "codProposicaoApensada")
-  output <- merge(proposicao, apensadas)
+  if (nrow(apensadas) > 0){
+    names(apensadas) <- c("nomeProposicaoApensada", "codProposicaoApensada")
+    output <- merge(output, apensadas)
+  }
   return(output)
 }
