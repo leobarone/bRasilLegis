@@ -24,11 +24,13 @@
 
 obterProposicaoPorID <- function(idProp) {
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ObterProposicaoPorID?',
-                                                query = list(idProp = idProp)))
-  proposicao <- xmlToDataFrame(getNodeSet(parsedOutput, "/proposicao"), stringsAsFactors = F)[1:19]
-  names(proposicao)
+                               query = list(idProp = idProp)))
+  output <- xmlToDataFrame(getNodeSet(parsedOutput, "/proposicao"), stringsAsFactors = F)[1:19]
+  names(output)
   apensadas <- xmlToDataFrame(getNodeSet(parsedOutput, "//apensadas/proposicao"), stringsAsFactors = F)
-  names(apensadas) <- c("nomeProposicaoApensada", "codProposicaoApensada")
-  output <- merge(proposicao, apensadas)
+  if (nrow(apensadas) > 0){
+    names(apensadas) <- c("nomeProposicaoApensada", "codProposicaoApensada")
+    output <- merge(output, apensadas)
+  }
   return(output)
 }
