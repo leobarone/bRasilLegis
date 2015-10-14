@@ -1,17 +1,17 @@
 #' Get Legislative Agenda
 #'
 #' @description Returns a data frame with information on the legislative agenda of a Camara
-#' dos Deputados stance between an initial and a final date. The maximum difference between
-#' initial and final date allowed by the web service allowed is 7 days. The inputs for this
-#' functions are of class character and in the format dd/mm/yyyy. All the three parameters
+#' dos Deputados organ between an initial and a final date. The maximum difference between
+#' initial and final date allowed by the web service is 7 days. The inputs for this
+#' function are of class character and in the format dd/mm/yyyy. All the three parameters
 #' are required.
 #'
-#' @param idOrgao integer, the Camara dos Deputados stance id code where the proposition is
+#' @param idOrgao integer, the Camara dos Deputados organ id code where the proposal is
 #' located (check listarTiposOrgaos function for help).
 #' @param datIni string of format dd/mm/yyyy, the initial date.
 #' @param datFim string of format dd/mm/yyyy, the initial date.
 #'
-#' @return A data frame with information on an specific legislator attendance to sessions.
+#' @return A data frame with information on a specific legislator attendance to sessions.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

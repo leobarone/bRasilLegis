@@ -3,7 +3,7 @@
 #' @description Returns a data frame containing details of the parties with representation at
 #' Camara dos deputados. There are no required parameters.
 #'
-#' @return A data frame containing information of all the parties with representation.
+#' @return A data frame containing information on all the parties with representation.
 #'
 #' @author Alexia Aslan; Leonardo Sangali Barone;
 #'

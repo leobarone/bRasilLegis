@@ -1,20 +1,20 @@
-#' List Legislators' Attendance in one day
+#' List Legislator Attendance on one day
 #'
-#' @description Returns a data frame with information on legislators attendance to sessions
-#' in an specific day. The maximum difference between initial and final date allowed by the
-#' web service allowed is 7 days. The inputs for this functions are of class character and
+#' @description Returns a data frame with information on legislator attendance at sessions
+#' on a specific day. The maximum difference between initial and final date allowed by the
+#' web service is 7 days. The inputs for this function are of class character and
 #' in the format dd/mm/yyyy.
 #'
-#' @param data string of format dd/mm/yyyy, the date if the sessions.
-#' @param numLegislatura integer, the number specific legislature.
-#' @param numMatriculaParlamentar integer, the legislator "matricula" number (check obterDeputados
-#' function for help). This is a optional parameter and it's default is empty.
-#' @param siglaPartido string, the political part of the proposition's author. This is a optional
-#' parameter and it's default is empty.
-#' @param siglaUF string, the state (Unidade da Federacao) of the proposition's author. This is
-#' a optional parameter and it's default is empty.
+#' @param data string of format dd/mm/yyyy, the date of the sessions.
+#' @param numLegislatura integer, the number specific to the legislature.
+#' @param numMatriculaParlamentar integer, the legislator "matricula" number (check the obterDeputados
+#' function for help). This is an optional parameter and its default is empty.
+#' @param siglaPartido string, the political party of the author of the proposal. This is an optional
+#' parameter and its default is empty.
+#' @param siglaUF string, the state (Unidade da Federacao) of the author of the proposal. This is an optional
+#' parameter and its default is empty.
 #'
-#' @return A data frame with information on legislators attendance to sessions in an specific day.
+#' @return A data frame with information on legislator attendance at sessions on a specific day.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

@@ -1,21 +1,21 @@
-#' Get Proposition Info
+#' Get Proposal Info
 #'
-#' @description Returns a data frame containing detailed information the requested proposition
-#' at Camara dos Deputados and respectives attached propositions ("proposicoes
-#' apensadas"). All the parameters are requires. Proposition's name is always a combination of
-#' tipo (type of propostion), numero (number of proposition) and ano (year of propostion). This
+#' @description Returns a data frame containing detailed information the requested proposal
+#' at Camara dos Deputados and respective related proposals ("proposicoes
+#' apensadas"). All the parameters are required. Proposal name is always a combination of
+#' tipo (type of proposal), numero (number of proposal) and ano (year of proposal). This
 #' function is similar to the obterProposicaoPorID function.
 #'
-#' @param tipo string, the type of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s).
-#' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s) and represents the year
-#' the proposition was written.
-#' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
-#' for help), which is part ot the name of the propostion(s).
+#' @param tipo string, the type of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s).
+#' @param ano integer, the year of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s) and represents the year
+#' the proposal was written.
+#' @param numero integer, the number of the proposal(s) (check listarSiglasTipoProposicao function
+#' for help), which is part of the name of the proposal(s).
 #'
-#' @return A data frame containing detailed information the requested propositions and attached
-#' propositions.
+#' @return A data frame containing detailed information on the requested proposals and related
+#' proposals.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

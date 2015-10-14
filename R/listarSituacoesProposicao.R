@@ -1,17 +1,17 @@
-#' List Status of Propositions
+#' List Status of Proposals
 #'
-#' @description Returns a data frame containing all the possible status of propositions in
-#' the legislative proccess at Camara dos Deputados (for example, "Vetado
+#' @description Returns a data frame containing all status possibilities of proposals in
+#' the legislative process at Camara dos Deputados (for example, "Vetado
 #' totalmente" (entirely vetoed), Aguardando Parecer ("waiting for review"), etc) and
-#' respectives identification codes at the web Service. This function does not require any
-#' parameter.
+#' respective identification codes from the web Service. This function does not require any
+#' parameters.
 #'
-#' @return A data frame containing all the possible types of situations.
+#' @return A data frame containing all the possible status types.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
 #' @note The output of this function can be used as a parameter in functions that require
-#' the type of status of a proposition.
+#' the type of status of a proposal.
 #'
 #' @import httr XML
 #'

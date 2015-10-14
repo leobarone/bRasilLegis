@@ -8,7 +8,7 @@
 #' @param numLegislatura integer, the number of the legislature.
 #' This is an optional parameter, the default is empty.
 #'
-#' @return A data frame containing information of all or of the required coalition.
+#' @return A data frame containing information on the required coalition.
 #'
 #' @author Alexia Aslan; Leonardo Sangali Barone;
 #'

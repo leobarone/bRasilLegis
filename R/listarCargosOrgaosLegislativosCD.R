@@ -1,11 +1,11 @@
-#' List Legislatives Positions at Camara dos Deputdaos
+#' List Legislative's Positions at the Camara dos Deputados
 #'
 #' @description Returns a data frame that lists positions (for example, "Presidente", "Relator",
-#' etc) that can be occupied by legislators at an internal Camara dos Deputados organization
-#' (comittes, floor, etc) and respectives identification codes at the web service. This function
-#' does not require any parameter.
+#' etc) that can be occupied by legislators in internal Camara dos Deputados organizations
+#' (committees, floor, etc) and respective identification codes at the web service. This function
+#' does not require any parameters.
 #'
-#' @return A data frame with information on positions at Camara dos Deputados
+#' @return A data frame with information on positions at the Camara dos Deputados
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

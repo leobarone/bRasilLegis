@@ -1,13 +1,13 @@
 #' Get Integral Speech
 #'
 #' @description Returns a data frame containing detailed information on every speech given in
-#' a legislative session. All the parameter of the function are required. You can use the
+#' a legislative session. All the parameters of the function are required. You can use the
 #' listarDiscursosPlenario function to get values for the parameters.
 #'
 #' @param codSessao string, the code of the session(check listarDiscursosPlenario function for help)
 #' @param numOrador integer, the number of legislator in the session(check listarDiscursosPlenario
 #' function for help)
-#' @param numQuarto integer, the number of the room the speech is stored (check
+#' @param numQuarto integer, the number of the room where the speech is stored (check
 #' listarDiscursosPlenario function for help)
 #' @param numInsercao, the number of the speech in the session (check listarDiscursosPlenario
 #' function for help)

@@ -1,43 +1,43 @@
-#' List Propositions
+#' List Proposals
 #'
-#' @description Returns a data frame containing detailed information the requested propositions
-#' at Camara dos Deputados. sigla (type of propostion) and ano (year of the
-#' proposition) are required parameters, unless parteNomeAutor (author's proposition partial
-#' name) is filled in. Proposition's name is always a combination of sigla (type of propostion),
-#' numero (number of proposition) and ano (year of propostion).
+#' @description Returns a data frame containing detailed information on the requested proposals
+#' from the Camara dos Deputados. sigla (type of proposal) and ano (year of the
+#' proposal) are required parameters, unless parteNomeAutor (partial name of proposal author)
+#' is filled in. Proposal name is always a combination of sigla (type of proposal),
+#' numero (number of proposal) and ano (year of proposal).
 #'
-#' @param sigla string, the type of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s).
-#' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s) and represents the year
-#' the proposition was written.
-#' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
-#' for help), which is part ot the name of the propostion(s). This is an optional parameter and
-#' it's default is empty.
-#' @param datApresentacaoIni string of format dd/mm/yyyy, the initial date of for the requested
-#' propositions. This is a optional parameter and it's default is empty.
+#' @param sigla string, the type of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s).
+#' @param ano integer, the year of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s) and represents the year
+#' the proposal was written.
+#' @param numero integer, the number of the proposal(s) (check listarSiglasTipoProposicao function
+#' for help), which is part of the name of the proposal(s). This is an optional parameter and
+#' its default is empty.
+#' @param datApresentacaoIni string of format dd/mm/yyyy, the initial date of the requested
+#' proposals. This is an optional parameter and its default is empty.
 #' @param datApresentacaoFim string of format dd/mm/yyyy, the initial date of for the requested
-#' propositions. This is a optional parameter and it's default is empty.
-#' @param idTipoAutor character, the id code of the type of author of propositon (for example, "Bancada",
+#' proposals. This is an optional parameter and its default is empty.
+#' @param idTipoAutor character, the id code of the type of author of proposal (for example, "Bancada",
 #' "Deputado Federal", "Senador", "Comissao Diretora", "Orgao do Poder Executivo", etc - check
-#' listarTiposAutores function for help). This is a optional parameter and it's default is empty.
-#' @param parteNomeAutor string, a part of the name of the propostion's author. This is a optional
-#' parameter and it's default is empty.
-#' @param siglaPartidoAutor string, the political part of the proposition's author. This is a optional
-#' parameter and it's default is empty.
-#' @param siglaUfAutor string, the state (Unidade da Federacao) of the proposition's author. This is
-#' a optional parameter and it's default is empty.
-#' @param generoAutor string, the gender ("F" for female "M" for male) of the proposition's author. This is
-#' a optional parameter and it's default is empty.
-#' @param idSituacaoProposicao string, the situation (stage of the legislative process) of the propostion
-#' (check listarSituacoesProposicao for hel). This is a optional parameter and it's default is empty.
-#' @param idOrgaoSituacaoProposicao string, the Camara dos Deputados stance where the proposition is
-#' located (check listarTiposOrgaos function for help). This is a optional parameter and it's default
+#' listarTiposAutores function for help). This is an optional parameter and its default is empty.
+#' @param parteNomeAutor string, a part of the name of the proposal author. This is an optional
+#' parameter and its default is empty.
+#' @param siglaPartidoAutor string, the political party of the author of the proposal. This is an
+#' optional parameter and its default is empty.
+#' @param siglaUfAutor string, the state (Unidade da Federacao) of the proposal author. This is an
+#'optional parameter and its default is empty.
+#' @param generoAutor string, the gender ("F" for female, "M" for male) of the proposal author. This
+#' is an optional parameter and its default is empty.
+#' @param idSituacaoProposicao string, the situation (stage of the legislative process) of the proposal
+#' (check listarSituacoesProposicao for help). This is an optional parameter and its default is empty.
+#' @param idOrgaoSituacaoProposicao string, the organ of the Camara dos Deputados where the proposition is
+#' located (check listarTiposOrgaos function for help). This is an optional parameter and its default
 #' is empty.
 #' @param emTramitacao integer, indicates if the proposition (1) is still in the legislative process, or
-#' (2) has reached an end. This is a optional parameter and it's default is empty (both conditions return).
+#' (2) has reached an end. This is an optional parameter and its default is empty (both conditions return).
 #'
-#' @return A data frame containing detailed information the requested propositions.
+#' @return A data frame containing detailed information on the requested proposals.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

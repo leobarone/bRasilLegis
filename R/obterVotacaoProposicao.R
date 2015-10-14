@@ -1,25 +1,25 @@
-#' Get Votes of a Proposition
+#' Get Votes on a Proposal
 #'
 #' @description Returns a data frame containing all the roll call votes for the requested
-#' proposition and individual votes at Camara dos Deputados. bancada is an
+#' proposal and individual votes at Camara dos Deputados. bancada is an
 #' optional parameter and if bancada = TRUE, leadership votes will be returned instead of
-#' individual legislators vote. Note that when a proposition goes to the floor every
-#' amendment, substitutive propositions, etc, will be submitted to voting, not only the
-#' main proposition (for example, one data frame may contain several different votings regarding
-#' the requested proposition).
+#' individual legislators' votes. Note that when a proposal goes to the floor every
+#' amendment, substitute proposal etc, will be submitted for voting, not only the
+#' main proposal (for example, one data frame may contain several different votes regarding
+#' the requested proposal).
 #'
-#' @param tipo character, the type of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s).
-#' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
-#' for help), which is part ot the name of the propostion(s).
-#' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s) and represents the year
-#' the proposition was written.
+#' @param tipo character, the type of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s).
+#' @param numero integer, the number of the proposal(s) (check listarSiglasTipoProposicao function
+#' for help), which is part of the name of the proposal(s).
+#' @param ano integer, the year of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s) and represents the year
+#' the proposal was written.
 #' @param bancada logic, if TRUE, leadership votes will be returned instead of
-#' individual legislators vote.
+#' individual legislators' votes.
 #'
 #' @return A data frame containing all the roll call votes for the requested
-#' proposition and individual votes.
+#' proposal and individual votes.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
@@ -32,7 +32,7 @@
 #' votesPec358.2013 <- obterVotacaoProposicao(tipo = "PEC", numero = 358,ano = 2013)
 #' head(votesPec358.2013)
 #'
-#' # Return the ledearship votes for the Proposta de Emenda a Constituicao 358 de 2013 (constitutional
+#' # Return the leadership votes for the Proposta de Emenda a Constituicao 358 de 2013 (constitutional
 #' # amendment 358 of 2013) voted in 2015
 #' bancadaPec358.2013 <- obterVotacaoProposicao(tipo = "PEC", numero = 358,ano = 2013, bancada = TRUE)
 #' head(bancadaPec358.2013)
