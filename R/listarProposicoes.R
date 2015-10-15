@@ -173,6 +173,6 @@ listarProposicoes <- function(sigla = "",
   situacao <- xmlToDataFrame(getNodeSet( parsedOutput, "//proposicao/situacao"), stringsAsFactors = F)[,1:2]
   situacao.orgao <- xmlToDataFrame(getNodeSet( parsedOutput, "//proposicao/situacao/orgao"), stringsAsFactors = F)
   situacao.principal <- xmlToDataFrame(getNodeSet( parsedOutput, "//proposicao/situacao/principal"), stringsAsFactors = F)
-  proposicao <- rbind(proposicao, tipoProposicao, orgaoNumerador, regime, apreciacao, autor1, ultimoDespacho, situacao, situacao.orgao, situacao.principal)
+  proposicao <- cbind(proposicao, tipoProposicao, orgaoNumerador, regime, apreciacao, autor1, ultimoDespacho, situacao, situacao.orgao, situacao.principal)
   return(proposicao)
 }
