@@ -1,16 +1,16 @@
-#' List Types of Propositions
+#' List Types of Proposals
 #'
-#' @description Returns a data frame containing all the possible types of propositions (siglas)
-#' at Camara dos Deputados (for example, "PL" (Projeto de Lei), "MPV" (Medida
-#' Provisoria, etc) and respectives identification codes at the web service. This function
-#' does not require any parameter.
+#' @description Returns a data frame containing all the possible types of proposals (siglas)
+#' at the Camara dos Deputados (for example, "PL" (Projeto de Lei), "MPV" (Medida
+#' Provisoria, etc) and respective identification codes from the web service. This function
+#' does not require any parameters.
 #'
-#' @return A data frame containing all the possible types of propositions.
+#' @return A data frame containing all the possible types of proposals.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
 #' @note The output of this function can be used as a parameter in functions that require
-#' the type of propositions.
+#' the type of proposals.
 #'
 #' @import httr XML
 #'

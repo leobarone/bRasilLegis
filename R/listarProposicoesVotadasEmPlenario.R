@@ -1,21 +1,21 @@
-#' List Voted Propositions
+#' List Proposals Voted On
 #'
-#' @description Returns a data frame containing all the of propositions that were submitted to
-#' the floor for voting at Camara dos Deputados in an specific year (ano) and
+#' @description Returns a data frame containing all the of proposals that were submitted to
+#' the floor for voting at Camara dos Deputados in a specific year (ano) and
 #' of a type (tipo). tipo is an optional parameter and if not specified the function will return
-#' all types of propositions.
+#' all types of proposals.
 #'
-#' @param ano integer, the year in which the propositions were submitted to the floor.
-#' @param tipo character, the type of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help). If not specified the function will return all types of propositions.
+#' @param ano integer, the year in which the proposals were submitted to the floor.
+#' @param tipo character, the type of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help). If not specified the function will return all types of proposals.
 #'
-#' @return A data frame containing all the of propositions that were submitted to
+#' @return A data frame containing all the of proposals that were submitted to
 #' the floor for voting.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
 #' @note The output of this function can be used as a parameter in functions that require
-#' voted propositions.
+#' proposals already voted on.
 #'
 #' @import httr XML
 #'

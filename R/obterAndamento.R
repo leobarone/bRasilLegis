@@ -1,25 +1,25 @@
-#' Get Proposition Progress
+#' Get Proposal Progress
 #'
 #' @description Returns a data frame containing detailed information of the progress of the
-#' requested proposition in the Brazilian Chamber of Deputies. sigla, numero and ano are required
-#' parameters. Optionally, initial date (dataIni) and stance (codOrgao) can be specified. Proposition's
-#' name is always combination of sigla (type of propostion), numero (number of proposition) and ano
-#' (year of propostion).
+#' requested proposal in the Brazilian Chamber of Deputies. sigla, numero and ano are required
+#' parameters. Optionally, initial date (dataIni) and stance (codOrgao) can be specified. The proposal
+#' name is always a combination of sigla (type of proposal), numero (number of proposal) and ano
+#' (year of proposal).
 #'
-#' @param sigla string, the type of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s).
-#' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
-#' for help), which is part ot the name of the propostion(s).
-#' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s) and represents the year
-#' the proposition was written.
-#' @param dataIni string of format dd/mm/yyyy, the date if the sessions. This is a optional parameter
-#' and it's default is empty.
-#' @param codOrgao integer, the Camara dos Deputados stance id code where the proposition is
-#' located (check listarTiposOrgaos function for help). This is a optional parameter and it's default
+#' @param sigla string, the type of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s).
+#' @param numero integer, the number of the proposal(s) (check listarSiglasTipoProposicao function
+#' for help), which is part of the name of the proposal(s).
+#' @param ano integer, the year of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s) and represents the year
+#' the proposal was written.
+#' @param dataIni string of format dd/mm/yyyy, the date of the sessions. This is an optional parameter
+#' and its default is empty.
+#' @param codOrgao integer, the Camara dos Deputados organ id code where the proposal is
+#' located (check listarTiposOrgaos function for help). This is an optional parameter and its default
 #' is empty.
 #'
-#' @return A data frame containing detailed information on the progess of the requested proposition.
+#' @return A data frame containing detailed information on the progress of the requested proposal.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

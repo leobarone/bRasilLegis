@@ -1,8 +1,8 @@
-#' List a Legislator Attendance
+#' List Legislator Attendance
 #'
-#' @description Returns a data frame with information on an specific legislator attendance
-#' to sessions between an initial and a final date. The maximum difference between initial
-#' and final date allowed by the web service allowed is 7 days. The inputs for this
+#' @description Returns a data frame with information on a specific legislator's attendance
+#' at sessions between an initial and a final date. The maximum difference between initial
+#' and final date allowed by the web service is 7 days. The inputs for this
 #' functions are of class character and in the format dd/mm/yyyy. All the three parameters
 #' are required.
 #'
@@ -11,7 +11,7 @@
 #' @param numMatriculaParlamentar integer, the legislator "matricula" number (check
 #' obterDeputados function for help).
 #'
-#' @return A data frame with information on an specific legislator attendance to sessions.
+#' @return A data frame with information on a specific legislator's attendance at sessions.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

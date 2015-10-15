@@ -3,10 +3,10 @@
 #' @description Returns a data frame containing all the legislators that are part of a
 #' Camara dos Deputados Organization.
 #'
-#' @param idOrgao integer, the Camara dos Deputados stance id code where the proposition is
+#' @param idOrgao integer, the Camara dos Deputados organization id code where the proposal is
 #' located (check listarTiposOrgaos function for help).
 #'
-#' @return A data frame containing detailed information on the progess of the requested proposition.
+#' @return A data frame containing detailed information on the progress of the requested proposal.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

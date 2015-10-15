@@ -1,22 +1,22 @@
 #' Get Legislator Details
 #'
-#' @description Returns a data frame containing detailed information of the legislator (for
+#' @description Returns a data frame containing detailed information on the legislator (for
 #' example, political parties, leaderships, committee positions, etc) at Camara dos Deputados.
 #' The parameter atuacao helps to define what type of information is going to be
 #' returned.
 #'
-#' @param ideCadastro integer, the legislator id number at the web service (check obterDeputados
+#' @param ideCadastro integer, the legislator id number from the web service (check obterDeputados
 #' function for help).
 #' @param numLegislatura integer, is the number of a Legislature. This is an optional parameter
-#' and it's default is empty.
+#' and its default is empty.
 #' @param atuacao string, if "bio" (default), return the basic bio information of the legislator;
-#' if "comissoes", return the committee information of the legislator; if "cargos", return the
-#' information on the positions occupied by the the legilator, if "exercicios" return the time
-#' intervals in which the legislator were at Camara dos Deputados; if "filiacoes" return the
-#' political parties in which the legislators belonged; and if "lideranca", returns leadership
-#' information of the legislators.
+#' if "comissoes", returns the committee information of the legislator; if "cargos", returns the
+#' information on the positions occupied by the the legislator, if "exercicios" returns the time
+#' intervals in which the legislator was at the Camara dos Deputados; if "filiacoes" returns the
+#' political parties to which the legislator belonged; and if "lideranca", returns leadership
+#' information on the legislators.
 #'
-#' @return A data frame containing detailed information of the legislator.
+#' @return A data frame containing detailed information on the legislator.
 #'
 #' @author Alexia Aslan; Leonardo Sangali Barone;
 #'

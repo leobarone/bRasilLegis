@@ -1,11 +1,11 @@
 #' List types of Authors
 #'
-#' @description Returns a data frame containing all the possible types of authors of propositions
-#' at Camara dos Deputados (for example, "Bancada", "Deputado Federal", "Senador",
-#' "Comissao Diretora", "Orgao do Poder Executivo", etc) and respectives identification
-#' codes at the web service. This function does not require any parameter.
+#' @description Returns a data frame containing all the possible types of authors of proposals
+#' at the Camara dos Deputados (for example, "Bancada", "Deputado Federal", "Senador",
+#' "Comissao Diretora", "Orgao do Poder Executivo", etc) and respective identification
+#' codes from the web service. This function does not require any parameters.
 #'
-#' @return A data frame containing all the possible types of authors of propositions.
+#' @return A data frame containing all the possible types of authors of proposals.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

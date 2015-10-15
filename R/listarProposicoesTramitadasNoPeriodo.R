@@ -1,22 +1,22 @@
-#' List Propositions in Process
+#' List Proposals in Process
 #'
 #' @description Returns a data frame containing legislative actions taken
-#' by proposition between and initial and a final date (parameters of the function) at
-#' Camara dos Deputados. The maximum difference between  initial and final date
-#' allowed by the web service allowed is 7 days. The inputs for this functions are of
+#' regarding the proposal between an initial and a final date (parameters of the function) at
+#' Camara dos Deputados. The maximum difference between the initial and final date
+#' allowed by the web service is 7 days. The inputs for this function are of
 #' class character and in the format dd/mm/yyyy.
 #'
-#' @param dtInicio string of format dd/mm/yyyy, the initial date of for the requested
-#' propositions.
-#' @param dtFim string of format dd/mm/yyyy, the initial date of for the requested
-#' propositions.
+#' @param dtInicio string of format dd/mm/yyyy, the initial date of the requested
+#' proposals.
+#' @param dtFim string of format dd/mm/yyyy, the initial date of the requested
+#' proposals.
 #'
-#' @return A data frame containing the legislative actions taken by propositions.
+#' @return A data frame containing the legislative actions regarding the proposals.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
 #' @note The output of this function can be used as a parameter in functions that require
-#' a vector of propositions.
+#' a vector of proposals.
 #'
 #' @import httr XML
 #'

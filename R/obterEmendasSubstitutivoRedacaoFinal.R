@@ -1,20 +1,20 @@
-#' Get Proposition Amemndments, Substitutives and Final Draft
+#' Get Proposal Amendments, Substitutions and Final Draft
 #'
-#' @description Returns a data frame containing detailed information on the ammendments, substitutive
-#' draft and final draft of the requested proposition at Camara dos Deputados.
-#' sigla, numero and ano are required parameters. Proposition's name is always combination of tipo
-#' (type of propostion), numero (number of proposition) and ano (year of propostion).
+#' @description Returns a data frame containing detailed information on the amendments, substitute
+#' drafts and final drafts of the requested proposal at Camara dos Deputados.
+#' sigla, numero and ano are required parameters. Proposal name is always a combination of tipo
+#' (type of proposal), numero (number of proposal) and ano (year of proposal).
 #'
-#' @param tipo string, the type of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s).
-#' @param numero integer, the number of the proposition(s) (check listarSiglasTipoProposicao function
-#' for help), which is part ot the name of the propostion(s).
-#' @param ano integer, the year of the proposition(s) (check listarSiglasTipoProposicao
-#' function for help), which is part ot the name of the propostion(s) and represents the year
-#' the proposition was written.
+#' @param tipo string, the type of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s).
+#' @param numero integer, the number of the proposal(s) (check listarSiglasTipoProposicao function
+#' for help), which is part o the name of the proposal(s).
+#' @param ano integer, the year of the proposal(s) (check listarSiglasTipoProposicao
+#' function for help), which is part of the name of the proposal(s) and represents the year
+#' the proposal was written.
 #'
-#' @return A a data frame containing detailed information on the ammendments, substitutive
-#' draft and final draft of the requested proposition.
+#' @return A a data frame containing detailed information on the amendments, substitute
+#' drafts and final drafts of the requested proposal.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

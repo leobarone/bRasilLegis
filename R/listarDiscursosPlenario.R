@@ -1,21 +1,21 @@
 #' List Speeches
 #'
-#' @description Returns a data frame containing the list of and information on every
+#' @description Returns a data frame containing the list of, and information on, every
 #' speech given between the initial and final date. Optionals can be used to specify
 #' legislator, political party, state and session.
 #'
 #' @param dataIni string of format dd/mm/yyyy, the initial date.
 #' @param dataFim string of format dd/mm/yyyy, the initial date.
 #' @param codigoSessao integer, the number of a required legislative session. This is
-#' a optional parameter and it's default is empty.
+#' an optional parameter and its default is empty.
 #' @param parteNomeParlamentar string, a part of the name of the legislator.
-#' This is a optional parameter and it's default is empty.
-#' @param siglaPartido string, the political part of the proposition's author. This is a optional
-#' parameter and it's default is empty.
-#' @param siglaUF string, the state (Unidade da Federacao) of the proposition's author. This is
-#' a optional parameter and it's default is empty.
+#' This is a optional parameter and its default is empty.
+#' @param siglaPartido string, the political party of the author of the proposal. This is an optional
+#' parameter and its default is empty.
+#' @param siglaUF string, the state (Unidade da Federacao) of the author of the proposal. This is
+#' an optional parameter and its default is empty.
 #'
-#' @return A data frame containing the list of and information on speeches.
+#' @return A data frame containing the list of speeches and information on the same.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'

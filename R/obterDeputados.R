@@ -1,9 +1,9 @@
 #' Get Legislator Info
 #'
-#' @description Returns a data frame containing detailed information of the active legislators
-#' at Camara dos Deputados and their respective information. There are none required parameters.
+#' @description Returns a data frame containing detailed information on the active legislators
+#' at Camara dos Deputados. There are no required parameters.
 #'
-#' @return A data frame containing basic information of all the active legislators in the Brazilian Chamber of Deputies.
+#' @return A data frame containing basic information on all the active legislators in the Brazilian Chamber of Deputies.
 #'
 #' @author Alexia Aslan; Leonardo Sangali Barone;
 #'

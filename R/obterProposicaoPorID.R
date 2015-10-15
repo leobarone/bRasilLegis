@@ -1,20 +1,20 @@
 #' Get Proposition Info by Id
 #'
-#' @description Returns a data frame containing detailed information the requested proposition
-#' at Camara dos Deputados and respectives attached propositions ("proposicoes
-#' apensadas"). The only parameter (idPorpo) is requires. This function is similar to the
+#' @description Returns a data frame containing detailed information on the requested proposal
+#' at Camara dos Deputados and respective related propositions ("proposicoes
+#' apensadas"). The only parameter (idPorpo) is required. This function is similar to the
 #' obterProposicao function.
 #'
-#' @param idProp integer, the requested proposition identification number.
+#' @param idProp integer, the requested proposal identification number.
 #'
-#' @return A data frame containing detailed information the requested propositions and attached
-#' propositions.
+#' @return A data frame containing detailed information on the requested proposal and related
+#' proposals.
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
 #' @examples
 #'
-#' # Return a data frame containing all of proposition PL 404/2015, whose id is 947717
+#' # Return a data frame containing all of proposal PL 404/2015, whose id is 947717
 #' proposicao <- obterProposicaoPorID(idProp = 947717)
 #' print(proposicao)
 #'
