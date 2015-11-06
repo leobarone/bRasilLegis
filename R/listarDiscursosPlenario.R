@@ -80,7 +80,7 @@ listarDiscursosPlenario <- function(dataIni,
                                                 sep = "")), stringsAsFactors = F)
     discurso <- cbind(orador, discurso[2:length(discurso)])
     names(discurso)[1] <- "numero.discurso"
-    output <- rbind(output, merge(output.parcial[i,], discurso))
+    output <- rbind(output, merge(output.parcial[j,], discurso))
   }
   return(output)
 }
