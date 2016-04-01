@@ -5,9 +5,9 @@ R tools for Brazilian Chamber of Deputies (Camara dos Deputados) data
 Camara dos Deputados web service: http://www2.camara.leg.br/transparencia/dados-abertos/dados-abertos-legislativo
 
 ## Authors
-Leonardo Sangali Barone <leobarone@gmail.com> and Alexia Aslan <alexia.aslan@gmail.com>
+Leonardo Sangali Barone <leobarone@gmail.com>, Alexia Aslan <alexia.aslan@gmail.com> and Robert Myles McDonnell
 
-## How to install? (thanks Carlos Cinelli and Júlio Canello):
+## How to install?
 install.packages("devtools"); library(devtools);
 install_github("leobarone/bRasilLegis")
 
