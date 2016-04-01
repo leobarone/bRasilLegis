@@ -14,6 +14,8 @@ install_github("leobarone/bRasilLegis")
 ## How does it work?
 The package offers methods to fetch legislative information stored in the web API maintained by the Brazilian Chamber of Deputies. Tutorial coming soon. Please check Câmara dos Deputados web service for detailed information on the data available.
 
+[Neylson Crepalde] (https://www.facebook.com/neylson.crepalde) provided us with a very nice example of how to use the package to build networks of federal deputies (in portuguese, [here] (https://neylsoncrepalde.github.io/2016-04-01-Rede-de-Parlamentares-usando-o-pacote-bRasilLegis/)).
+
 ## Important!
 This package depends on 2 other R packages: XML and httr. Please, make sure you have them ready prior to using bRasilLeg. ALL of the functions require XML and httr.
 
