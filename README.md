@@ -22,3 +22,6 @@ This package depends on 2 other R packages: XML and httr. Please, make sure you 
 ## Want to help the developers? Have good ideas?
 This is an ongoing open source and open minded project. The main purposes are to generate public data on Brazilian politics, enhance gov transparency, help political science community and have fun. If you have comments, critics, suggestions or even want to be part of the developing team, just write us (leobarone@gmail.com and alexia.aslan@gmail.com).
 
+## Citing the package
+You can cite the packege in publications by using the output of the R function:
+citation(package = "bRasilLegis")
