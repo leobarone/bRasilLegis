@@ -28,7 +28,7 @@
 #'
 #' # Return a vote matrix of the votes in 2003
 #' Votes2003 <- voteToRollcall(2003, pscl = FALSE)
-#'
+#' @seealso \code{\link[pscl]{rollcall}}, \url{https://cran.r-project.org/web/packages/MCMCpack/index.html}
 #' @rdname voteToRollcall
 #'
 #' @export
