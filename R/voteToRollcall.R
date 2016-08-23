@@ -15,7 +15,7 @@
 #'
 #' @return Either rollcall object or a matrix of votes.
 #'
-#' @author Robert McDonnell
+#' @author Robert McDonnell; Leonardo Sangali Barone
 #'
 #' @import httr XML pscl dplyr tibble
 #'
@@ -50,7 +50,7 @@ voteToRollcall <- function(year, pscl = TRUE, legis.data = FALSE){
   pacman::p_load(char=c("pscl"), install=TRUE)
 
 
-  votes <- suppressWarnings(data_frame())
+  votes <- data_frame()
 
   yaynay <- function(var){
     var <- gsub("Abstenção      ", NA, var)
@@ -61,27 +61,31 @@ voteToRollcall <- function(year, pscl = TRUE, legis.data = FALSE){
     var <- as.numeric(var)
   }
 
-  cat("Getting vote data...\n")
     for (i in year){
+        cat(paste("Getting vote and legislator data...(", i, ")\n", sep=""))
+
       props <- listarProposicoesVotadasEmPlenario(i)
       vote_code <- unique(props$codProposicao)
 
-      proposals <- suppressWarnings(data_frame())
+      proposals <- data_frame()
       for (code in vote_code){
-        proposals <- suppressWarnings(bind_rows(proposals, obterProposicaoPorID(code))); Sys.sleep(0.2)
+        proposals <- suppressWarnings(bind_rows(proposals,
+                                                obterProposicaoPorID(code)))
       }
 
       vote_name <- proposals$nomeProposicao[proposals$idProposicaoPrincipal == "\n  "]
       vote_type <- substr(vote_name, 1, regexpr(" ", vote_name) - 1)
       vote_name <- unique(vote_name[vote_type != "REQ"])
-
       vote_type <- substr(vote_name, 1, regexpr(" ", vote_name) - 1)
+      vote_number <- substr(vote_name,
+                            regexpr(" ", vote_name) + 1,
+                            regexpr("/", vote_name) - 1)
+      vote_year <- substr(vote_name, regexpr("/", vote_name) + 1,
+                          regexpr("/", vote_name) + 4)
 
-      vote_number <- substr(vote_name, regexpr(" ", vote_name) + 1, regexpr("/", vote_name) - 1)
+      vote_df <- data_frame()
 
-      vote_year <- substr(vote_name, regexpr("/", vote_name) + 1, regexpr("/", vote_name) + 4)
-      vote_df <- suppressWarnings(data_frame())
-      cat("Getting vote and legislator data...\n")
+
       for (j in 1:length(vote_year)){
         vote_df <- suppressWarnings(bind_rows(vote_df,
                            obterVotacaoProposicao(vote_type[j],
@@ -92,8 +96,9 @@ voteToRollcall <- function(year, pscl = TRUE, legis.data = FALSE){
       }
       votes <- suppressWarnings(bind_rows(votes, vote_df))
     }
-    votes$vote <- yaynay(votes$Voto)
-    votes$rollcall <- paste(votes$Tipo, votes$Numero, votes$Ano, sep = " ")
+    votes$vote <- suppressWarnings(yaynay(votes$Voto))
+    votes$rollcall <- paste(votes$Tipo, votes$Numero, sep ="")
+    votes$rollcall <- paste(votes$rollcall, votes$Ano, sep="/")
 
     legislatorId <- votes$ideCadastro
     voteId <- votes$rollcall
@@ -116,10 +121,14 @@ voteToRollcall <- function(year, pscl = TRUE, legis.data = FALSE){
     rollCallMatrix <- matrix(as.numeric(unlist(rollCallMatrix)), nrow=nrow(rollCallMatrix))
     dimnames(rollCallMatrix) <- list(unique(nameID), unique(voteId))
 
-    legisData <- suppressWarnings(data_frame(ID=unique(nameID),
-                                             Name = votes$Nome[match(unique(nameID), votes$ideCadastro)],
-                                             Party = votes$Partido[match(unique(nameID), votes$ideCadastro)],
-                                             State = votes$UF[match(unique(nameID), votes$ideCadastro)]))
+    legisData <- data.frame(ID=unique(nameID),
+                            Name = votes$Nome[match(unique(nameID),
+                                                    votes$ideCadastro)],
+                            Party = votes$Partido[match(unique(nameID),
+                                                        votes$ideCadastro)],
+                            State = votes$UF[match(unique(nameID),
+                                                   votes$ideCadastro)],
+                            row.names = NULL, stringsAsFactors = FALSE)
     legisData$FullID = paste(legisData$Name, legisData$Party, sep = ":")
 
     if(pscl == FALSE & legis.data == FALSE) {
@@ -131,24 +140,12 @@ voteToRollcall <- function(year, pscl = TRUE, legis.data = FALSE){
       return(rollcallObj_1)
     } else if(pscl == TRUE & legis.data == TRUE){
 
-        rollCallObject <- rollcall(data=rollCallMatrix, legis.names=legisData$FullID, vote.names=unique(votes$rollcall), legis.data=legisData)
+        rollCallObject <- rollcall(data=rollCallMatrix,
+                                   legis.names=legisData$FullID,
+                                   vote.names=unique(votes$rollcall),
+                                   legis.data=legisData)
 
         cat("Returning rollcall object and legislator data\n")
         return(rollCallObject)
     }
-}
-
-
-RC <- voteToRollcall(2012:2013, pscl = F, legis.data = F)
-
-
-
-
-
-
-
-
-
-
-
 }
