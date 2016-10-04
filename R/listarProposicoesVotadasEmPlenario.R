@@ -17,7 +17,7 @@
 #' @note The output of this function can be used as a parameter in functions that require
 #' proposals already voted on.
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'

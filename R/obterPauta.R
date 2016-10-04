@@ -15,6 +15,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML dplyr
+#'
 #' @examples
 #'
 #' # Members of Comissao de Agricultura, Pecuaria, Abastecimento e Desenvolvimento Rural
@@ -47,7 +49,7 @@ obterPauta <- function(idOrgao,
       proposicao = data.frame(sigla = NA, idProposicao = NA, numOrdemApreciacao = NA,
                               ementa = NA, resultado = NA, relator = NA, textoParecerRelator = NA)
     }
-    output <- rbind(output, merge(reuniao[i,], proposicao))
+    output <- bind_rows(output, merge(reuniao[i,], proposicao))
   }
   return(output)
 }

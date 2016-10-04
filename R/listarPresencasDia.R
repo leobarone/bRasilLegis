@@ -18,7 +18,7 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'
@@ -52,7 +52,7 @@ listarPresencasDia <- function(data,
                                               parlamentar$carteiraParlamentar[i],
                                               "']//sessaoDia",
                                               sep = "")), stringsAsFactors = F)
-    output <- rbind(output, merge(parlamentar[i,], sessao))
+    output <- bind_rows(output, merge(parlamentar[i,], sessao))
   }
   return(output)
 }

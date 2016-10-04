@@ -7,7 +7,7 @@
 #'
 #' @author Alexia Aslan; Leonardo Sangali Barone;
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'
@@ -28,7 +28,7 @@ obterLideresBancadas <- function(){
     lideres <- xmlToDataFrame(getNodeSet(parsedOutput, paste("//bancada[@sigla = '", bancada$sigla[i], "']/*", sep = '')), stringsAsFactors = F)
     lideres$posicao <- "vice-lider"; lideres$posicao[1] <- "lider"
     lideres[1]
-    output <- rbind(output, merge(bancada[i,], lideres))
+    output <- bind_rows(output, merge(bancada[i,], lideres))
   }
   return(output)
 }

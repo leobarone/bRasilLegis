@@ -23,7 +23,7 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'
@@ -56,7 +56,7 @@ obterVotacaoProposicao <- function(tipo, numero, ano, bancada = F) {
       voto <- as.data.frame(t(xpathSApply(parsedOutput, paste("//Votacao[@ObjVotacao = '", votacoes$ObjVotacao[i], "']//Deputado", sep = ''),
                                           xmlAttrs)), stringsAsFactors = F)
       if (nrow(voto) > 1){
-        output <- rbind(output, merge(votacoes[i,], voto))
+        output <- bind_rows(output, merge(votacoes[i,], voto))
       }
     }
   }
@@ -66,7 +66,7 @@ obterVotacaoProposicao <- function(tipo, numero, ano, bancada = F) {
       bancada <- as.data.frame(t(xpathSApply(parsedOutput, paste("//Votacao[@ObjVotacao = '", votacoes$ObjVotacao[i], "']//bancada", sep = ''),
                                              xmlAttrs)), stringsAsFactors = F)
       if (nrow(bancada) > 1){
-        output <- rbind(output, merge(votacoes[i,], bancada))
+        output <- bind_rows(output, merge(votacoes[i,], bancada))
       }
     }
   }

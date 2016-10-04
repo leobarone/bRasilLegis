@@ -20,7 +20,7 @@
 #'
 #' @author Alexia Aslan; Leonardo Sangali Barone;
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'
@@ -53,7 +53,7 @@ obterDetalhesDeputado <- function (ideCadastro,
                                                    infoBasica$numLegislatura[i],
                                                    "']//comissao",
                                                    sep = "")), stringsAsFactors = F)
-      output <- rbind(output, merge(infoBasica, comissoes))
+      output <- bind_rows(output, merge(infoBasica, comissoes))
     }
   }
 
@@ -66,7 +66,7 @@ obterDetalhesDeputado <- function (ideCadastro,
                                                 infoBasica$numLegislatura[i],
                                                 "']//cargosComissoes",
                                                 sep = "")), stringsAsFactors = F)
-      output <- rbind(output, merge(infoBasica, cargos))
+      output <- bind_rows(output, merge(infoBasica, cargos))
     }
   }
 
@@ -79,7 +79,7 @@ obterDetalhesDeputado <- function (ideCadastro,
                                                   infoBasica$numLegislatura[i],
                                                   "']//periodosExercicio",
                                                   sep = "")), stringsAsFactors = F)
-      output <- rbind(output, merge(infoBasica, periodos))
+      output <- bind_rows(output, merge(infoBasica, periodos))
     }
   }
 
@@ -92,7 +92,7 @@ obterDetalhesDeputado <- function (ideCadastro,
                                                    infoBasica$numLegislatura[i],
                                                    "']//filiacoesPartidarias",
                                                    sep = "")), stringsAsFactors = F)
-      output <- rbind(output, merge(infoBasica, filiacoes))
+      output <- bind_rows(output, merge(infoBasica, filiacoes))
     }
   }
 
@@ -105,7 +105,7 @@ obterDetalhesDeputado <- function (ideCadastro,
                                                    infoBasica$numLegislatura[i],
                                                    "']//historicoLider",
                                                    sep = "")), stringsAsFactors = F)
-      output <- rbind(output, merge(infoBasica, lideranca))
+      output <- bind_rows(output, merge(infoBasica, lideranca))
     }
   }
   return(output)

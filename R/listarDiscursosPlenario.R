@@ -21,7 +21,7 @@
 #'
 #' @note The output of this function can be used as a parameter in functions that speeches ids.
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'
@@ -58,7 +58,7 @@ listarDiscursosPlenario <- function(dataIni,
                                                   "']//faseSessao",
                                                   sep = "")), stringsAsFactors = F)[,1:2]
     names(faseSessao) <- c("codigo.fase.sessao", "descricao.fase.sessao")
-    output.parcial <- rbind(output.parcial, merge(sessao[i,], faseSessao))
+    output.parcial <- bind_rows(output.parcial, merge(sessao[i,], faseSessao))
   }
 
   output <- data.frame()
@@ -80,7 +80,7 @@ listarDiscursosPlenario <- function(dataIni,
                                                 sep = "")), stringsAsFactors = F)
     discurso <- cbind(orador, discurso[2:length(discurso)])
     names(discurso)[1] <- "numero.discurso"
-    output <- rbind(output, merge(output.parcial[i,], discurso))
+    output <- bind_rows(output, merge(output.parcial[i,], discurso))
   }
   return(output)
 }

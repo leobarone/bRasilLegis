@@ -12,7 +12,7 @@
 #'
 #' @author Alexia Aslan; Leonardo Sangali Barone;
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'
@@ -39,7 +39,7 @@ obterPartidosBlocoCD <- function (idBloco = "",
                                                   bloco$idBloco[i],
                                                   "']//partido",
                                                   sep = "")), stringsAsFactors = F)
-    output <- rbind(output, merge(bloco[i,], partidos))
+    output <- bind_rows(output, merge(bloco[i,], partidos))
   }
   return(output)
 }

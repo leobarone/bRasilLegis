@@ -12,6 +12,8 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
+#' @import httr XML dplyr
+#'
 #' @examples
 #'
 #' # Return a data frame containing all of proposal PL 404/2015, whose id is 947717

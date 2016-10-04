@@ -10,7 +10,7 @@
 #'
 #' @author Leonardo Sangali Barone; Alexia Aslan
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'

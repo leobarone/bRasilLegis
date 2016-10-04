@@ -11,7 +11,7 @@
 #'
 #' @note This is an auxiliary function used in several other functions of the bRasilLeg package
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @rdname xmlAttributesToDataFrame
 #' @export

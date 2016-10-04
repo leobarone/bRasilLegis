@@ -10,7 +10,7 @@
 #' @note The output of this function can be used as a parameter in functions that require
 #' the type of status of sessions.
 #'
-#' @import httr XML
+#' @import httr XML dplyr
 #'
 #' @examples
 #'
