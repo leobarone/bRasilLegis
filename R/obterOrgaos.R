@@ -22,5 +22,6 @@
 
 obterOrgaos <- function(){
   parsedOutput <- xmlParse(GET('http://www.camara.gov.br/SitCamaraWS/Orgaos.asmx/ObterOrgaos?'))
-  return(xmlAttributesToDataFrame(parsedOutput, "//orgao"))
+  tempdf <- (xmlAttributesToDataFrame(parsedOutput, "//orgao"))
+  tempdf[, 3] <- str_trim(tempdf[, 3]) # remove unnecessary spaces in SIGLA column
 }
